@@ -1,5 +1,10 @@
-body {
-  background: red;
+@media (max-width: 375px) {
+  .logo {
+    width: 392px 40%;
+    height: 68px 40%;
+    text-align: center;
+    color: red;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

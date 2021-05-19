@@ -1,0 +1,14 @@
+@media (max-width: 375px){
+
+    $largeurlogo: 392px;
+    $hauteurlogo: 68px;
+    .logo{
+        width: $largeurlogo 40%;
+        height: $hauteurlogo 40%;
+        text-align: center;
+        color: red;
+
+    }
+
+
+}
