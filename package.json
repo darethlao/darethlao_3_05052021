@@ -1,6 +1,6 @@
 {
     "scripts":{
-    "sass":"sass --watch ./sass:./css"
+    "sass": "sass --watch ./sass:./css"
 }
 
  }

@@ -3,12 +3,20 @@
     $largeurlogo: 392px;
     $hauteurlogo: 68px;
     .logo{
-        width: $largeurlogo 40%;
-        height: $hauteurlogo 40%;
+        img{
+            width: $largeurlogo * 0.40;
+            height: $hauteurlogo * 0.41;
+        }
         text-align: center;
-        color: red;
-
+        margin-bottom: 2%;
     }
 
-
+    #localisation{
+        display: flex;
+        width: 100%;
+        height: 52px;
+        align-items: center;
+        justify-content: center;
+        background-color: #EAEAEA;
+    }
 }
