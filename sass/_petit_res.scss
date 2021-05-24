@@ -1,4 +1,6 @@
-@media (max-width: 375px){
+@media (min-width: 320px) and (max-width: 375px){
+    
+    /* Header */
 
     $largeurlogo: 392px;
     $hauteurlogo: 68px;
@@ -11,12 +13,205 @@
         margin-bottom: 2%;
     }
 
+    /* Section */
+
     #localisation{
         display: flex;
-        width: 100%;
-        height: 52px;
+        height: 50px;
+        border-top: solid 2px #CFCFCF;
+        box-shadow: inset 0px 2px #DDDDDD;
         align-items: center;
         justify-content: center;
         background-color: #EAEAEA;
+        font-size: 0.9rem;
+        font-weight: bold;
+            #map_maket_alt{
+                margin-right: 1em;
+            }
     }
+
+    #reservez_le_menu{
+        height: 260px;
+        padding-top: 11%;
+        margin-bottom: 15%;
+        background-color: #F6F6F6;
+        text-align: center;
+        h1{
+            font-size: 1.45rem;
+            font-weight: bold;
+            margin-bottom: 3%;
+         }
+        p{
+            font-size: 1rem;
+            margin-bottom: 8%;
+        }
+        $cd-btn: linear-gradient(#FF79DA, #9356DC);
+        $cd-txt: white;
+        .bouton{
+            width: 60%;
+            height: 46px;
+            border-radius: 10rem;
+            box-shadow: grey;
+            background: $cd-btn;
+            align-items: center;
+            line-height: 3.2;
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin: 0 auto;
+            /* test
+            transform:  $cd-btn1 1s;
+            transition-property: transform;
+            transition-duration: 1000ms;
+            &:hover {
+                transform: $cd-btn2 1s;
+            }*/
+            .restaurants{
+                color: $cd-txt;
+            }
+        }
+    }
+
+    /* Fontionnement */
+
+    #fonctionnement{
+        height: 355px;
+        $taille_soustitre: 1.4rem;
+        h2{
+            font-size: $taille_soustitre;
+            margin-left: 6%;
+            margin-bottom: 10%;
+        }
+        .etape{
+            width: 85%;
+            height: 60px;
+            border-radius: 1rem;
+            box-shadow: 5px 5px 15px 5px #E6E6E6;
+            background: #F6F6F6;
+            line-height: 4.4;
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin: 0 auto;
+            margin-bottom: 8%;
+                .num_etape{
+                    padding: 2% 3% 2% 3%;
+                    border-radius: 50%;
+                    background-color: #9356DC;
+                    font-size: 0.7rem;
+                    color: white;
+                    margin-right: 6%;
+                }
+                $taille_icone: 1.1rem;
+                .fas.fa-mobile-alt, .fas.fa-list, .fa-itch-io{
+                    font-size: $taille_icone;
+                    margin-right: 6%;
+                    color: grey;
+                }
+                $couleur_etape: black;
+                .choisissez_un_restaurant, .composez_votre_menu, .degustez_au_restaurant{
+                color: $couleur_etape;
+                }
+        }
+    }
+
+    /* Restaurants */
+
+    #restaurants{
+        height: 1125px;
+        padding-top: 15%;
+        background-color: #F6F6F6;
+        $taille_soustitre: 1.4rem;
+        h3{
+            font-size: $taille_soustitre;
+            margin-left: 6%;
+            margin-bottom: 6%;
+        }
+        #les_restaurants{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+                .le_restaurant{
+                    display: flex;
+                    flex-wrap: wrap;
+                    width: 90%;
+                    height: 230px;
+                    border-radius: 6%;
+                    box-shadow: 5px 5px 15px 5px #E6E6E6;
+                    background-color: white;
+                    margin-bottom: 5%;
+                    .image_restaurant1, .image_restaurant2,  .image_restaurant3,  .image_restaurant4, {
+                        width: 100%;
+                        min-width: 100%;
+                        height: 70%;
+                        border-top-left-radius: 6%;
+                        border-top-right-radius: 6%;
+                        overflow: hidden;
+                    }
+                    .image_restaurant1 img{
+                        width: 303.072px;
+                        height: 202.048px;
+                        margin: -44px 0 0 -11px;
+                    }
+                    .image_restaurant2 img{
+                        width: 296.45px;
+                        height: 370.44px;
+                        margin: -130px 0 0 -2px;
+                    }
+                    .image_restaurant3 img{
+                        width: 308.21px;
+                        height: 205.45px;
+                        margin: -45px 0 0 -5px;
+                    }
+                    .image_restaurant4 img{
+                        width: 308.21px;
+                        height: 205.45px;
+                        margin: -47px 0 0 -11px;
+                    }
+                    .nom_restaurant{
+                        margin-top: 2.5%; 
+                        margin-left: 4%;
+                        margin-right: 40%;
+                        line-height: 1.5;
+                        color: black;
+                    }
+                    .fas.fa-heart{
+                        color: linear-gradient(#FF79DA, #9356DC);
+                    }
+                }
+        }
+    }
+
+    /* Footer */
+
+    #pied_de_page{
+        height: 178px;
+        padding-top: 6%;
+        background-color: #353535;
+        color: white;
+        .logo{
+            font-family:  'Shrikhand';
+            font-size: 0.95rem;
+            text-align: left;
+            margin-left: 5%;
+            margin-bottom: 5%;
+        }
+        .menu_pied_de_page{
+            font-size: 0.8rem;
+            line-height: 1.7;
+            margin-left: 5%;
+            .fas.fa-utensils{
+                font-size: 0.7rem;
+            }
+            .fas.fa-hands-helping{
+                font-size: 0.5rem;
+            }
+            $marge_droit_petite_icone: 1.5%;
+            .fas.fa-utensils, .fas.fa-hands-helping{
+                margin-right: $marge_droit_petite_icone;
+            }
+            .proposer_un_restaurant, .devenir_partenaire, .mentions_legales, .contact{
+                color: white;
+            }
+        }
+    }
+
 }

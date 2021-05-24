@@ -2,9 +2,19 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  text-decoration: none;
 }
 
-@media (max-width: 375px) {
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v27/KFOmCnqEu92Fr1Mu4mxK.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@media (min-width: 320px) and (max-width: 375px) {
+  /* Header */
   .logo {
     text-align: center;
     margin-bottom: 2%;
@@ -14,14 +24,198 @@
     height: 27.88px;
   }
 
+  /* Section */
   #localisation {
     display: flex;
-    width: 100%;
-    height: 52px;
+    height: 50px;
+    border-top: solid 2px #CFCFCF;
+    box-shadow: inset 0px 2px #DDDDDD;
     align-items: center;
     justify-content: center;
     background-color: #EAEAEA;
+    font-size: 0.9rem;
+    font-weight: bold;
   }
+  #localisation #map_maket_alt {
+    margin-right: 1em;
+  }
+
+  #reservez_le_menu {
+    height: 260px;
+    padding-top: 11%;
+    margin-bottom: 15%;
+    background-color: #F6F6F6;
+    text-align: center;
+  }
+  #reservez_le_menu h1 {
+    font-size: 1.45rem;
+    font-weight: bold;
+    margin-bottom: 3%;
+  }
+  #reservez_le_menu p {
+    font-size: 1rem;
+    margin-bottom: 8%;
+  }
+  #reservez_le_menu .bouton {
+    width: 60%;
+    height: 46px;
+    border-radius: 10rem;
+    box-shadow: grey;
+    background: linear-gradient(#FF79DA, #9356DC);
+    align-items: center;
+    line-height: 3.2;
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin: 0 auto;
+    /* test
+    transform:  $cd-btn1 1s;
+    transition-property: transform;
+    transition-duration: 1000ms;
+    &:hover {
+        transform: $cd-btn2 1s;
+    }*/
+  }
+  #reservez_le_menu .bouton .restaurants {
+    color: white;
+  }
+
+  /* Fontionnement */
+  #fonctionnement {
+    height: 355px;
+  }
+  #fonctionnement h2 {
+    font-size: 1.4rem;
+    margin-left: 6%;
+    margin-bottom: 10%;
+  }
+  #fonctionnement .etape {
+    width: 85%;
+    height: 60px;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 15px 5px #E6E6E6;
+    background: #F6F6F6;
+    line-height: 4.4;
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin: 0 auto;
+    margin-bottom: 8%;
+  }
+  #fonctionnement .etape .num_etape {
+    padding: 2% 3% 2% 3%;
+    border-radius: 50%;
+    background-color: #9356DC;
+    font-size: 0.7rem;
+    color: white;
+    margin-right: 6%;
+  }
+  #fonctionnement .etape .fas.fa-mobile-alt, #fonctionnement .etape .fas.fa-list, #fonctionnement .etape .fa-itch-io {
+    font-size: 1.1rem;
+    margin-right: 6%;
+    color: grey;
+  }
+  #fonctionnement .etape .choisissez_un_restaurant, #fonctionnement .etape .composez_votre_menu, #fonctionnement .etape .degustez_au_restaurant {
+    color: black;
+  }
+
+  /* Restaurants */
+  #restaurants {
+    height: 1125px;
+    padding-top: 15%;
+    background-color: #F6F6F6;
+  }
+  #restaurants h3 {
+    font-size: 1.4rem;
+    margin-left: 6%;
+    margin-bottom: 6%;
+  }
+  #restaurants #les_restaurants {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #restaurants #les_restaurants .le_restaurant {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    height: 230px;
+    border-radius: 6%;
+    box-shadow: 5px 5px 15px 5px #E6E6E6;
+    background-color: white;
+    margin-bottom: 5%;
+  }
+  #restaurants #les_restaurants .le_restaurant .image_restaurant1, #restaurants #les_restaurants .le_restaurant .image_restaurant2, #restaurants #les_restaurants .le_restaurant .image_restaurant3, #restaurants #les_restaurants .le_restaurant .image_restaurant4 {
+    width: 100%;
+    min-width: 100%;
+    height: 70%;
+    border-top-left-radius: 6%;
+    border-top-right-radius: 6%;
+    overflow: hidden;
+  }
+  #restaurants #les_restaurants .le_restaurant .image_restaurant1 img {
+    width: 303.072px;
+    height: 202.048px;
+    margin: -44px 0 0 -11px;
+  }
+  #restaurants #les_restaurants .le_restaurant .image_restaurant2 img {
+    width: 296.45px;
+    height: 370.44px;
+    margin: -130px 0 0 -2px;
+  }
+  #restaurants #les_restaurants .le_restaurant .image_restaurant3 img {
+    width: 308.21px;
+    height: 205.45px;
+    margin: -45px 0 0 -5px;
+  }
+  #restaurants #les_restaurants .le_restaurant .image_restaurant4 img {
+    width: 308.21px;
+    height: 205.45px;
+    margin: -47px 0 0 -11px;
+  }
+  #restaurants #les_restaurants .le_restaurant .nom_restaurant {
+    margin-top: 2.5%;
+    margin-left: 4%;
+    margin-right: 40%;
+    line-height: 1.5;
+    color: black;
+  }
+  #restaurants #les_restaurants .le_restaurant .fas.fa-heart {
+    color: linear-gradient(#FF79DA, #9356DC);
+  }
+
+  /* Footer */
+  #pied_de_page {
+    height: 178px;
+    padding-top: 6%;
+    background-color: #353535;
+    color: white;
+  }
+  #pied_de_page .logo {
+    font-family: "Shrikhand";
+    font-size: 0.95rem;
+    text-align: left;
+    margin-left: 5%;
+    margin-bottom: 5%;
+  }
+  #pied_de_page .menu_pied_de_page {
+    font-size: 0.8rem;
+    line-height: 1.7;
+    margin-left: 5%;
+  }
+  #pied_de_page .menu_pied_de_page .fas.fa-utensils {
+    font-size: 0.7rem;
+  }
+  #pied_de_page .menu_pied_de_page .fas.fa-hands-helping {
+    font-size: 0.5rem;
+  }
+  #pied_de_page .menu_pied_de_page .fas.fa-utensils, #pied_de_page .menu_pied_de_page .fas.fa-hands-helping {
+    margin-right: 1.5%;
+  }
+  #pied_de_page .menu_pied_de_page .proposer_un_restaurant, #pied_de_page .menu_pied_de_page .devenir_partenaire, #pied_de_page .menu_pied_de_page .mentions_legales, #pied_de_page .menu_pied_de_page .contact {
+    color: white;
+  }
+}
+body {
+  font-family: "Roboto", sans-serif;
 }
 
 /*# sourceMappingURL=style.css.map */
