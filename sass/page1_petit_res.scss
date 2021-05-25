@@ -1,0 +1,173 @@
+@media (min-width: 320px) and (max-width: 375px){
+    
+    /* Header */
+
+    #titre_principal{
+        display: flex;
+        .arrow_left{
+            margin-left: 5%;
+            margin-right: 17%;
+            margin-top: 6%;
+        }
+        $largeurlogo: 392px;
+        $hauteurlogo: 68px;
+        .logo{
+            img{
+                width: $largeurlogo * 0.37;
+                height: $hauteurlogo * 0.38;
+            }
+            margin-top: 4.5%;
+            margin-bottom: 3%;
+        }
+    }
+
+    /* Section */
+
+    .image_restaurant{
+        height: 10%;
+        overflow: hidden;
+    }
+    .image_restaurant img{
+        width: 354.24px;
+        height: 236.16px;
+        margin: 0 0 0 -20px;
+    }
+
+    /* Bloc Menu */
+
+    #nom_restaurant{
+        display:flex;
+        flex-wrap: wrap;
+        height: 1020px;
+        border-top-left-radius: 5%;
+        border-top-right-radius: 5%;     
+        background-color: #F6F6F6;
+        h1{
+            font-family: 'Shrikhand';
+            font-size: 1.48rem;
+            padding-top: 8%;
+            margin-left: 5%;
+            margin-bottom: 8%;
+        }
+        .far.fa-heart{
+            padding-top: 10%;
+            margin-left: 9%;
+            font-size: 1.4rem;
+        }
+        #menu_restaurant{
+            .groupe_entree, .groupe_plats, .groupe_dessert{
+                height: 250px;
+                margin-left: 5%;
+                margin-bottom: 5%;
+                background-color: #F6F6F6;
+                h2{
+                    width: 13%;
+                    padding-bottom: 1.5%;
+                    margin-bottom: 4%;
+                    border-bottom: solid 2px #99E2D0;
+                    font-size: 0.9rem;
+                    color: #9A9A9A;
+                }
+                .plat{
+                    display: flex;
+                    justify-content: space-between;
+                    height: 55px;
+                    padding-left: 3%;
+                    margin-bottom: 4%;
+                    border-radius: 15px;
+                    box-shadow: 5px 5px 15px 5px #E6E6E6;
+                    background-color: white;
+                    font-size: 0.79rem;
+                    line-height: 1.5;
+                    .nom_plat{
+                        padding-top: 2.5%;
+                        .titre_plat{
+                            font-size: 0.95rem;
+                            font-weight: bold;
+                        }
+                    }
+                    .prix{
+                        width: 19%;
+                        height: 55px;
+                        padding-top: 10.5%;
+                        text-align: center;
+                    }
+                    .choix{
+                        width: 19%;
+                        height: 55px;
+                        border-top-right-radius: 15px;
+                        border-bottom-right-radius: 15px;
+                        background-color: #99E2D0;
+                        font-size: 1rem;
+                        color: white;
+                        text-align: center;
+                        line-height: 3.5;
+                    }
+                    .choix{
+                        display: none;
+                    }
+                    .prix:hover ~ .choix{
+                        display: block;
+                    }
+                }
+            }
+        }
+        $cd-btn: linear-gradient(#FF79DA, #9356DC);
+        $cd-txt: white;
+        .bouton{
+            width: 60%;
+            height: 46px;
+            border-radius: 10rem;
+            box-shadow: grey;
+            background: $cd-btn;
+            text-align: center;
+            line-height: 3.2;
+            font-size: 0.9rem;
+            margin: 0 auto;
+            /* test
+            transform:  $cd-btn1 1s;
+            transition-property: transform;
+            transition-duration: 1000ms;
+            &:hover {
+                transform: $cd-btn2 1s;
+            }*/
+            .commander{
+                color:$cd-txt;
+            }
+        }
+    }
+
+    /* Footer */
+
+    #pied_de_page{
+        height: 178px;
+        padding-top: 6%;
+        background-color: #353535;
+        color: white;
+        .logo{
+            font-family:  'Shrikhand';
+            font-size: 0.95rem;
+            text-align: left;
+            margin-left: 5%;
+            margin-bottom: 5%;
+        }
+        .menu_pied_de_page{
+            font-size: 0.8rem;
+            line-height: 1.7;
+            margin-left: 5%;
+            .fas.fa-utensils{
+                font-size: 0.7rem;
+            }
+            .fas.fa-hands-helping{
+                font-size: 0.5rem;
+            }
+            $marge_droit_petite_icone: 1.5%;
+            .fas.fa-utensils, .fas.fa-hands-helping{
+                margin-right: $marge_droit_petite_icone;
+            }
+            .proposer_un_restaurant, .devenir_partenaire, .mentions_legales, .contact{
+                color: white;
+            }
+        }
+    }
+}
