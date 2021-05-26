@@ -24,8 +24,8 @@
     margin-top: 6%;
   }
   #titre_principal .logo {
-    margin-top: 4.5%;
-    margin-bottom: 3%;
+    margin-top: 5.5%;
+    margin-bottom: 2.5%;
   }
   #titre_principal .logo img {
     width: 145.04px;
@@ -46,29 +46,35 @@
 
   /* Bloc Menu */
   #nom_restaurant {
+    position: relative;
+    top: -50px;
     display: flex;
     flex-wrap: wrap;
-    height: 1020px;
-    border-top-left-radius: 5%;
-    border-top-right-radius: 5%;
+    height: 1000px;
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
     background-color: #F6F6F6;
   }
   #nom_restaurant h1 {
     font-family: "Shrikhand";
-    font-size: 1.48rem;
-    padding-top: 8%;
+    font-size: 1.5rem;
+    padding-top: 9%;
+    padding-bottom: 5%;
     margin-left: 5%;
-    margin-bottom: 8%;
   }
   #nom_restaurant .far.fa-heart {
     padding-top: 10%;
     margin-left: 9%;
     font-size: 1.4rem;
   }
+  #nom_restaurant #menu_restaurant {
+    width: 100%;
+  }
   #nom_restaurant #menu_restaurant .groupe_entree, #nom_restaurant #menu_restaurant .groupe_plats, #nom_restaurant #menu_restaurant .groupe_dessert {
+    width: 90%;
     height: 250px;
     margin-left: 5%;
-    margin-bottom: 5%;
+    margin-bottom: 8%;
     background-color: #F6F6F6;
   }
   #nom_restaurant #menu_restaurant .groupe_entree h2, #nom_restaurant #menu_restaurant .groupe_plats h2, #nom_restaurant #menu_restaurant .groupe_dessert h2 {
@@ -82,47 +88,53 @@
   #nom_restaurant #menu_restaurant .groupe_entree .plat, #nom_restaurant #menu_restaurant .groupe_plats .plat, #nom_restaurant #menu_restaurant .groupe_dessert .plat {
     display: flex;
     justify-content: space-between;
-    height: 55px;
+    height: 62px;
     padding-left: 3%;
     margin-bottom: 4%;
     border-radius: 15px;
     box-shadow: 5px 5px 15px 5px #E6E6E6;
     background-color: white;
-    font-size: 0.79rem;
-    line-height: 1.5;
+    font-size: 0.8rem;
+    line-height: 1.6;
   }
   #nom_restaurant #menu_restaurant .groupe_entree .plat .nom_plat, #nom_restaurant #menu_restaurant .groupe_plats .plat .nom_plat, #nom_restaurant #menu_restaurant .groupe_dessert .plat .nom_plat {
+    display: inline-block;
+    width: 250px;
     padding-top: 2.5%;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
   #nom_restaurant #menu_restaurant .groupe_entree .plat .nom_plat .titre_plat, #nom_restaurant #menu_restaurant .groupe_plats .plat .nom_plat .titre_plat, #nom_restaurant #menu_restaurant .groupe_dessert .plat .nom_plat .titre_plat {
-    font-size: 0.95rem;
+    font-size: 1rem;
     font-weight: bold;
   }
   #nom_restaurant #menu_restaurant .groupe_entree .plat .prix, #nom_restaurant #menu_restaurant .groupe_plats .plat .prix, #nom_restaurant #menu_restaurant .groupe_dessert .plat .prix {
     width: 19%;
     height: 55px;
-    padding-top: 10.5%;
+    padding-top: 11.5%;
     text-align: center;
   }
   #nom_restaurant #menu_restaurant .groupe_entree .plat .choix, #nom_restaurant #menu_restaurant .groupe_plats .plat .choix, #nom_restaurant #menu_restaurant .groupe_dessert .plat .choix {
-    width: 19%;
-    height: 55px;
+    width: 23%;
+    height: 62px;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
     background-color: #99E2D0;
     font-size: 1rem;
     color: white;
     text-align: center;
-    line-height: 3.5;
+    line-height: 4;
   }
   #nom_restaurant #menu_restaurant .groupe_entree .plat .choix, #nom_restaurant #menu_restaurant .groupe_plats .plat .choix, #nom_restaurant #menu_restaurant .groupe_dessert .plat .choix {
     display: none;
   }
-  #nom_restaurant #menu_restaurant .groupe_entree .plat .prix:hover ~ .choix, #nom_restaurant #menu_restaurant .groupe_plats .plat .prix:hover ~ .choix, #nom_restaurant #menu_restaurant .groupe_dessert .plat .prix:hover ~ .choix {
+  #nom_restaurant #menu_restaurant .groupe_entree .plat .nom_plat:active ~ .choix, #nom_restaurant #menu_restaurant .groupe_plats .plat .nom_plat:active ~ .choix, #nom_restaurant #menu_restaurant .groupe_dessert .plat .nom_plat:active ~ .choix {
     display: block;
   }
   #nom_restaurant .bouton {
-    width: 60%;
+    width: 50%;
     height: 46px;
     border-radius: 10rem;
     box-shadow: grey;
@@ -130,7 +142,9 @@
     text-align: center;
     line-height: 3.2;
     font-size: 0.9rem;
-    margin: 0 auto;
+    margin: auto;
+    margin-top: 10%;
+    margin-bottom: 10%;
     /* test
     transform:  $cd-btn1 1s;
     transition-property: transform;
@@ -145,7 +159,9 @@
 
   /* Footer */
   #pied_de_page {
-    height: 178px;
+    position: relative;
+    top: -50px;
+    height: 170px;
     padding-top: 6%;
     background-color: #353535;
     color: white;
