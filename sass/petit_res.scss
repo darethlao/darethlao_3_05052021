@@ -116,6 +116,39 @@
                 color: $couleur_etape;
                 }
         }
+        .etape3{
+            width: 85%;
+            height: 60px;
+            border-radius: 1rem;
+            box-shadow: 5px 5px 15px 5px #E6E6E6;
+            background: rgb(147, 86, 220, 0.1);
+            line-height: 4.4;
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin: 0 auto;
+            margin-bottom: 8%;
+                .num_etape{
+                    padding: 2% 3% 2% 3%;
+                    border-radius: 50%;
+                    background-color: #9356DC;
+                    font-size: 0.7rem;
+                    color: white;
+                    margin-right: 6%;
+                }
+                $taille_icone: 1.1rem;
+                .fas.fa-mobile-alt, .fas.fa-list, .fa-itch-io{
+                    font-size: $taille_icone;
+                    margin-right: 6%;
+                    color: grey;
+                }
+                $couleur_etape: black;
+                .choisissez_un_restaurant, .composez_votre_menu, .degustez_au_restaurant{
+                color: $couleur_etape;
+                }
+                .fab.fa-itch-io{
+                    color:#9356DC;
+                }
+        }
     }
 
     /* Restaurants */

@@ -69,6 +69,9 @@
   }
   #nom_restaurant #menu_restaurant {
     width: 100%;
+    /* Tranlation Y avec effet cubic-beier
+                transform: translateY(100%);
+                transition: transform 2000ms cubic-bezier(0.1, 0.7, 1.0, 0.1); */
   }
   #nom_restaurant #menu_restaurant .groupe_entree, #nom_restaurant #menu_restaurant .groupe_plats, #nom_restaurant #menu_restaurant .groupe_dessert {
     width: 90%;
@@ -126,12 +129,14 @@
     color: white;
     text-align: center;
     line-height: 4;
-  }
-  #nom_restaurant #menu_restaurant .groupe_entree .plat .choix, #nom_restaurant #menu_restaurant .groupe_plats .plat .choix, #nom_restaurant #menu_restaurant .groupe_dessert .plat .choix {
     display: none;
   }
   #nom_restaurant #menu_restaurant .groupe_entree .plat .nom_plat:active ~ .choix, #nom_restaurant #menu_restaurant .groupe_plats .plat .nom_plat:active ~ .choix, #nom_restaurant #menu_restaurant .groupe_dessert .plat .nom_plat:active ~ .choix {
     display: block;
+    transition: width 2s;
+    transition-timing-function: cubic-bezier(0.1, 0.7, 1, 0.1);
+    transform: rotate(1turn);
+    transition: transform 500ms ease-in-out;
   }
   #nom_restaurant .bouton {
     width: 50%;
