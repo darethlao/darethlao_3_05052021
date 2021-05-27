@@ -61,20 +61,21 @@
     width: 60%;
     height: 46px;
     border-radius: 10rem;
-    box-shadow: grey;
-    background: linear-gradient(#FF79DA, #9356DC);
+    box-shadow: 2px 2px 2px grey;
+    background: linear-gradient(#ff79da, #9356dc);
+    box-shadow: 2px 2px 2px rgba(82, 81, 81, 0.9);
     align-items: center;
     line-height: 3.2;
     font-size: 0.9rem;
     font-weight: bold;
     margin: 0 auto;
-    /* test
-    transform:  $cd-btn1 1s;
-    transition-property: transform;
-    transition-duration: 1000ms;
-    &:hover {
-        transform: $cd-btn2 1s;
-    }*/
+    cursor: pointer;
+    transform: scale(1);
+    transition: transform 400ms;
+  }
+  #reservez_le_menu .bouton:hover {
+    background: linear-gradient(rgba(255, 121, 218, 0.9), rgba(147, 86, 220, 0.9));
+    box-shadow: 2px 5px 5px #525151;
   }
   #reservez_le_menu .bouton .restaurants {
     color: white;
