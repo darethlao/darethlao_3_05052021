@@ -1,5 +1,5 @@
 @media (min-width: 320px) and (max-width: 375px){
-    
+
     /* Header */
 
     $largeurlogo: 392px;
@@ -79,6 +79,7 @@
     /* Fontionnement */
 
     #fonctionnement{
+        width: auto;
         height: 355px;
         $taille_soustitre: 1.4rem;
         h2{
@@ -86,7 +87,7 @@
             margin-left: 6%;
             margin-bottom: 10%;
         }
-        .etape{
+        .cartouche{
             width: 85%;
             height: 60px;
             border-radius: 1rem;
@@ -98,52 +99,54 @@
             margin: 0 auto;
             margin-bottom: 8%;
                 .num_etape{
-                    padding: 2% 3% 2% 3%;
+                    position: relative;
+                    right: 8px;
+                    padding: 1.5% 3% 1.5% 3%;
                     border-radius: 50%;
                     background-color: #9356DC;
                     font-size: 0.7rem;
                     color: white;
-                    margin-right: 6%;
+                    margin-right: 3%;
                 }
                 $taille_icone: 1.1rem;
-                .fas.fa-mobile-alt, .fas.fa-list, .fa-itch-io{
+                .fas.fa-mobile-alt, .fas.fa-list{
                     font-size: $taille_icone;
                     margin-right: 6%;
                     color: grey;
                 }
-                $couleur_etape: black;
-                .choisissez_un_restaurant, .composez_votre_menu, .degustez_au_restaurant{
-                color: $couleur_etape;
+                .etape{
+                    color: black;
                 }
         }
-        .etape3{
+        .cartouche3{
             width: 85%;
             height: 60px;
             border-radius: 1rem;
             box-shadow: 5px 5px 15px 5px #E6E6E6;
-            background: rgb(147, 86, 220, 0.1);
+            background: rgb(147, 86, 220, 0.15);
             line-height: 4.4;
             font-size: 0.9rem;
             font-weight: bold;
             margin: 0 auto;
             margin-bottom: 8%;
                 .num_etape{
-                    padding: 2% 3% 2% 3%;
+                    position: relative;
+                    right: 8px;
+                    padding: 1.5% 3% 1.5% 3%;
                     border-radius: 50%;
                     background-color: #9356DC;
                     font-size: 0.7rem;
                     color: white;
-                    margin-right: 6%;
+                    margin-right: 3%;
                 }
                 $taille_icone: 1.1rem;
-                .fas.fa-mobile-alt, .fas.fa-list, .fa-itch-io{
+                .fa-itch-io{
                     font-size: $taille_icone;
                     margin-right: 6%;
                     color: grey;
                 }
-                $couleur_etape: black;
-                .choisissez_un_restaurant, .composez_votre_menu, .degustez_au_restaurant{
-                color: $couleur_etape;
+                .etape{
+                color: black;
                 }
                 .fab.fa-itch-io{
                     color:#9356DC;
@@ -165,8 +168,8 @@
         }
         #les_restaurants{
             display: flex;
-            flex-direction: column;
-            align-items: center;
+            flex-wrap: wrap;
+            justify-content:space-around;
                 .le_restaurant{
                     display: flex;
                     flex-wrap: wrap;
@@ -176,22 +179,59 @@
                     box-shadow: 5px 5px 15px 5px #E6E6E6;
                     background-color: white;
                     margin-bottom: 5%;
-                    .image_restaurant1, .image_restaurant2, .image_restaurant3, .image_restaurant4, {
+                    .image_restaurant1, .image_restaurant2, .image_restaurant3, .image_restaurant4{
                         min-width: 100%;
                         height: 70%;
                         border-top-left-radius: 6%;
                         border-top-right-radius: 6%;
                         overflow: hidden;
                     }
-                    .image_restaurant1 img{
-                        width: 303.072px;
-                        height: 202.048px;
-                        margin: -44px 0 0 -11px;
+                    .image_restaurant1, .image_restaurant2 p{
+                        text-align: center;
                     }
-                    .image_restaurant2 img{
-                        width: 296.45px;
-                        height: 370.44px;
-                        margin: -130px 0 0 -2px;
+                    .image_restaurant1{
+                        position: relative;
+                        img{
+                            width: 303.072px;
+                            height: 202.048px;
+                            margin: -44px 0 0 -11px;
+                            position: relative;
+                            z-index: 1;
+                        }
+                        p{
+                            position: absolute;
+                            top:12px;
+                            left:210px;
+                            width:70px;
+                            height:25px;
+                            line-height:2;
+                            background-color:#99E2D0;
+                            z-index:2;
+                            font-size:0.8rem;
+                            color:#008766;
+                        }
+                    }
+                    .image_restaurant2{
+                        position: relative;
+                        img{
+                            width: 296.45px;
+                            height: 370.44px;
+                            margin: -130px 0 0 -2px;
+                            position: relative;
+                            z-index: 1;
+                        }
+                        p{
+                            position: absolute;
+                            top:12px;
+                            left:210px;
+                            width:70px;
+                            height:25px;
+                            line-height:2;
+                            background-color:#99E2D0;
+                            z-index:2;
+                            font-size:0.8rem;
+                            color:#008766;
+                        }
                     }
                     .image_restaurant3 img{
                         width: 308.21px;
@@ -203,15 +243,49 @@
                         height: 205.45px;
                         margin: -47px 0 0 -11px;
                     }
-                    .nom_restaurant{
-                        margin-top: 2.5%; 
+                    .restaurant1, .restaurant2, .restaurant3, .restaurant4{
+                        display: flex;
+                        flex: wrap;
+                        justify-content: space-between;
+                        width: 275px;
                         margin-left: 4%;
-                        margin-right: 40%;
+                        margin-right: 35%;
                         line-height: 1.5;
                         color: black;
+                        .nom_restaurant{
+                            width: 240px;
+                        }
                     }
-                    .fas.fa-heart{
-                        color: linear-gradient(#FF79DA, #9356DC);
+                    $coeur-color-start: #FF79DA;
+                    $coeur-color-end: #9356DC;
+                    .coeur_restaurant{
+                        display:flex;
+                        margin-top: 10px;
+                        font-size: 1.2rem;
+                        .far{
+                            /* Couleur dégradé icône coeur */
+                            background: black;
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                            width: 20px;
+                        }
+                        .fas{
+                            /* Couleur dégradé icône coeur */
+                            background: linear-gradient($coeur-color-end, $coeur-color-start);
+                            background-clip: text;
+                            text-fill-color: transparent;
+                            /* Animation icône coeur */
+                            position: absolute;
+                            width: 0;
+                        }
+                        &:hover .far{
+                            width: 0;
+                        }
+                        &:hover .fas{
+                            width: 20px;
+                            transition: width 1s;
+                            transition-timing-function: cubic-bezier(0.7, 1.0, 1.0, 0.7);
+                            }
                     }
                 }
         }

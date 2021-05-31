@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   padding: 0;
   margin: 0;
@@ -83,6 +84,7 @@
 
   /* Fontionnement */
   #fonctionnement {
+    width: auto;
     height: 355px;
   }
   #fonctionnement h2 {
@@ -90,7 +92,7 @@
     margin-left: 6%;
     margin-bottom: 10%;
   }
-  #fonctionnement .etape {
+  #fonctionnement .cartouche {
     width: 85%;
     height: 60px;
     border-radius: 1rem;
@@ -102,51 +104,55 @@
     margin: 0 auto;
     margin-bottom: 8%;
   }
-  #fonctionnement .etape .num_etape {
-    padding: 2% 3% 2% 3%;
+  #fonctionnement .cartouche .num_etape {
+    position: relative;
+    right: 8px;
+    padding: 1.5% 3% 1.5% 3%;
     border-radius: 50%;
     background-color: #9356DC;
     font-size: 0.7rem;
     color: white;
-    margin-right: 6%;
+    margin-right: 3%;
   }
-  #fonctionnement .etape .fas.fa-mobile-alt, #fonctionnement .etape .fas.fa-list, #fonctionnement .etape .fa-itch-io {
+  #fonctionnement .cartouche .fas.fa-mobile-alt, #fonctionnement .cartouche .fas.fa-list {
     font-size: 1.1rem;
     margin-right: 6%;
     color: grey;
   }
-  #fonctionnement .etape .choisissez_un_restaurant, #fonctionnement .etape .composez_votre_menu, #fonctionnement .etape .degustez_au_restaurant {
+  #fonctionnement .cartouche .etape {
     color: black;
   }
-  #fonctionnement .etape3 {
+  #fonctionnement .cartouche3 {
     width: 85%;
     height: 60px;
     border-radius: 1rem;
     box-shadow: 5px 5px 15px 5px #E6E6E6;
-    background: rgba(147, 86, 220, 0.1);
+    background: rgba(147, 86, 220, 0.15);
     line-height: 4.4;
     font-size: 0.9rem;
     font-weight: bold;
     margin: 0 auto;
     margin-bottom: 8%;
   }
-  #fonctionnement .etape3 .num_etape {
-    padding: 2% 3% 2% 3%;
+  #fonctionnement .cartouche3 .num_etape {
+    position: relative;
+    right: 8px;
+    padding: 1.5% 3% 1.5% 3%;
     border-radius: 50%;
     background-color: #9356DC;
     font-size: 0.7rem;
     color: white;
-    margin-right: 6%;
+    margin-right: 3%;
   }
-  #fonctionnement .etape3 .fas.fa-mobile-alt, #fonctionnement .etape3 .fas.fa-list, #fonctionnement .etape3 .fa-itch-io {
+  #fonctionnement .cartouche3 .fa-itch-io {
     font-size: 1.1rem;
     margin-right: 6%;
     color: grey;
   }
-  #fonctionnement .etape3 .choisissez_un_restaurant, #fonctionnement .etape3 .composez_votre_menu, #fonctionnement .etape3 .degustez_au_restaurant {
+  #fonctionnement .cartouche3 .etape {
     color: black;
   }
-  #fonctionnement .etape3 .fab.fa-itch-io {
+  #fonctionnement .cartouche3 .fab.fa-itch-io {
     color: #9356DC;
   }
 
@@ -163,8 +169,8 @@
   }
   #restaurants #les_restaurants {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
   }
   #restaurants #les_restaurants .le_restaurant {
     display: flex;
@@ -183,15 +189,52 @@
     border-top-right-radius: 6%;
     overflow: hidden;
   }
+  #restaurants #les_restaurants .le_restaurant .image_restaurant1, #restaurants #les_restaurants .le_restaurant .image_restaurant2 p {
+    text-align: center;
+  }
+  #restaurants #les_restaurants .le_restaurant .image_restaurant1 {
+    position: relative;
+  }
   #restaurants #les_restaurants .le_restaurant .image_restaurant1 img {
     width: 303.072px;
     height: 202.048px;
     margin: -44px 0 0 -11px;
+    position: relative;
+    z-index: 1;
+  }
+  #restaurants #les_restaurants .le_restaurant .image_restaurant1 p {
+    position: absolute;
+    top: 12px;
+    left: 210px;
+    width: 70px;
+    height: 25px;
+    line-height: 2;
+    background-color: #99E2D0;
+    z-index: 2;
+    font-size: 0.8rem;
+    color: #008766;
+  }
+  #restaurants #les_restaurants .le_restaurant .image_restaurant2 {
+    position: relative;
   }
   #restaurants #les_restaurants .le_restaurant .image_restaurant2 img {
     width: 296.45px;
     height: 370.44px;
     margin: -130px 0 0 -2px;
+    position: relative;
+    z-index: 1;
+  }
+  #restaurants #les_restaurants .le_restaurant .image_restaurant2 p {
+    position: absolute;
+    top: 12px;
+    left: 210px;
+    width: 70px;
+    height: 25px;
+    line-height: 2;
+    background-color: #99E2D0;
+    z-index: 2;
+    font-size: 0.8rem;
+    color: #008766;
   }
   #restaurants #les_restaurants .le_restaurant .image_restaurant3 img {
     width: 308.21px;
@@ -203,15 +246,47 @@
     height: 205.45px;
     margin: -47px 0 0 -11px;
   }
-  #restaurants #les_restaurants .le_restaurant .nom_restaurant {
-    margin-top: 2.5%;
+  #restaurants #les_restaurants .le_restaurant .restaurant1, #restaurants #les_restaurants .le_restaurant .restaurant2, #restaurants #les_restaurants .le_restaurant .restaurant3, #restaurants #les_restaurants .le_restaurant .restaurant4 {
+    display: flex;
+    flex: wrap;
+    justify-content: space-between;
+    width: 275px;
     margin-left: 4%;
-    margin-right: 40%;
+    margin-right: 35%;
     line-height: 1.5;
     color: black;
   }
-  #restaurants #les_restaurants .le_restaurant .fas.fa-heart {
-    color: linear-gradient(#FF79DA, #9356DC);
+  #restaurants #les_restaurants .le_restaurant .restaurant1 .nom_restaurant, #restaurants #les_restaurants .le_restaurant .restaurant2 .nom_restaurant, #restaurants #les_restaurants .le_restaurant .restaurant3 .nom_restaurant, #restaurants #les_restaurants .le_restaurant .restaurant4 .nom_restaurant {
+    width: 240px;
+  }
+  #restaurants #les_restaurants .le_restaurant .coeur_restaurant {
+    display: flex;
+    margin-top: 10px;
+    font-size: 1.2rem;
+  }
+  #restaurants #les_restaurants .le_restaurant .coeur_restaurant .far {
+    /* Couleur dégradé icône coeur */
+    background: black;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: 20px;
+  }
+  #restaurants #les_restaurants .le_restaurant .coeur_restaurant .fas {
+    /* Couleur dégradé icône coeur */
+    background: linear-gradient(#9356DC, #FF79DA);
+    background-clip: text;
+    text-fill-color: transparent;
+    /* Animation icône coeur */
+    position: absolute;
+    width: 0;
+  }
+  #restaurants #les_restaurants .le_restaurant .coeur_restaurant:hover .far {
+    width: 0;
+  }
+  #restaurants #les_restaurants .le_restaurant .coeur_restaurant:hover .fas {
+    width: 20px;
+    transition: width 1s;
+    transition-timing-function: cubic-bezier(0.7, 1, 1, 0.7);
   }
 
   /* Footer */

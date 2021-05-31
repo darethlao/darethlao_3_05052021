@@ -106,7 +106,7 @@
                         text-align: center;
                     }
                     .choix{
-                        width: 23%;
+                        width: 0;
                         height: 62px;
                         border-top-right-radius: 15px;
                         border-bottom-right-radius: 15px;
@@ -115,14 +115,16 @@
                         color: white;
                         text-align: center;
                         line-height: 4;
-                        display: none;
+                        transform: rotate(0);
+                        overflow: hidden;
                     }
-                    .nom_plat:active ~ .choix{
+                    &:hover .choix{
+                        width: 23%;
                         display: block;
                         transition: width 2s;
                         transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
-                        transform: rotate(1turn);
-                        transition: transform 500ms ease-in-out;
+                        transform: rotate(360deg);
+                        //transition: transform 500ms ease-in-out;
                     }
                 }
             }
@@ -146,7 +148,7 @@
             margin-bottom: 10%;
             cursor: pointer;
             transition: all 400ms;
-            &:hover {
+            &:hover{
                 background: $cd-btn-end;
                 box-shadow: $cd-bdr-end;
             }

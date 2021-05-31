@@ -120,7 +120,7 @@
     text-align: center;
   }
   #nom_restaurant #menu_restaurant .groupe_entree .plat .choix, #nom_restaurant #menu_restaurant .groupe_plats .plat .choix, #nom_restaurant #menu_restaurant .groupe_dessert .plat .choix {
-    width: 23%;
+    width: 0;
     height: 62px;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
@@ -129,14 +129,15 @@
     color: white;
     text-align: center;
     line-height: 4;
-    display: none;
+    transform: rotate(0);
+    overflow: hidden;
   }
-  #nom_restaurant #menu_restaurant .groupe_entree .plat .nom_plat:active ~ .choix, #nom_restaurant #menu_restaurant .groupe_plats .plat .nom_plat:active ~ .choix, #nom_restaurant #menu_restaurant .groupe_dessert .plat .nom_plat:active ~ .choix {
+  #nom_restaurant #menu_restaurant .groupe_entree .plat:hover .choix, #nom_restaurant #menu_restaurant .groupe_plats .plat:hover .choix, #nom_restaurant #menu_restaurant .groupe_dessert .plat:hover .choix {
+    width: 23%;
     display: block;
     transition: width 2s;
     transition-timing-function: cubic-bezier(0.1, 0.7, 1, 0.1);
-    transform: rotate(1turn);
-    transition: transform 500ms ease-in-out;
+    transform: rotate(360deg);
   }
   #nom_restaurant .bouton {
     width: 50%;
