@@ -1,4 +1,19 @@
 @charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v27/KFOmCnqEu92Fr1Mu4mxK.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
 @media (min-width: 320px) and (max-width: 375px) {
   /* Header */
   #titre_principal {
@@ -25,9 +40,9 @@
   }
 
   .image_restaurant img {
-    width: 354.24px;
-    height: 236.16px;
-    margin: 0 0 0 -20px;
+    width: 388.388px;
+    height: 266.112px;
+    margin: 0 0 0 0px;
   }
 
   /* Bloc Menu */
@@ -119,6 +134,7 @@
     background-color: white;
     font-size: 0.8rem;
     line-height: 1.6;
+    position: relative;
   }
   #nom_restaurant #menu_restaurant .groupe_entree .plat .nom_plat, #nom_restaurant #menu_restaurant .groupe_plats .plat .nom_plat, #nom_restaurant #menu_restaurant .groupe_dessert .plat .nom_plat {
     display: inline-block;
@@ -149,10 +165,14 @@
     color: white;
     text-align: center;
     line-height: 4;
+    position: absolute;
+    right: -67px;
+    /* Sélection d'un plat */
   }
   #nom_restaurant #menu_restaurant .groupe_entree .plat:hover .choix, #nom_restaurant #menu_restaurant .groupe_plats .plat:hover .choix, #nom_restaurant #menu_restaurant .groupe_dessert .plat:hover .choix {
-    width: 22%;
-    transition: width 1s cubic-bezier(0.1, 0.1, 0.1, 1);
+    width: 23%;
+    transform: translate(-67px);
+    transition: transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
   #nom_restaurant #menu_restaurant .groupe_entree .plat:hover .fas, #nom_restaurant #menu_restaurant .groupe_plats .plat:hover .fas, #nom_restaurant #menu_restaurant .groupe_dessert .plat:hover .fas {
     transform: rotate(360deg);
@@ -215,5 +235,8 @@
     color: white;
   }
 }
+body {
+  font-family: "Roboto", sans-serif;
+}
 
-/*# sourceMappingURL=page1_petit_res.css.map */
+/*# sourceMappingURL=page2.css.map */
