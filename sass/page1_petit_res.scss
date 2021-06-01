@@ -58,15 +58,56 @@
         }
         #menu_restaurant{
             width: 100%;
-/* Tranlation Y avec effet cubic-beier
-            transform: translateY(100%);
-            transition: transform 2000ms cubic-bezier(0.1, 0.7, 1.0, 0.1); */
             .groupe_entree, .groupe_plats, .groupe_dessert{
                 width: 90%;
                 height: 250px;
                 margin-left: 5%;
                 margin-bottom: 8%;
                 background-color: #F6F6F6;
+            }
+
+            /* Les plats apparaissent par groupe "Entrée"; "Plat" et "Dessert" */
+
+            .groupe_entree{
+                animation-delay: 10ms;
+                animation: fadein 1s;
+                @keyframes fadein{
+                    from{
+                        opacity: 0;
+                   }
+                    to{
+                        opacity: 1;
+                    }
+                }
+            }
+            
+            .groupe_plats{
+                animation-delay: 200ms;
+                animation: fadein 3s;
+                @keyframes fadein{
+                    from{
+                        opacity: 0;
+                   }
+                    to{
+                        opacity: 1;
+                    }
+                }
+            }
+
+            .groupe_dessert{
+                animation-delay: 800ms;
+                animation: fadein 5s;
+                @keyframes fadein{
+                    from{
+                        opacity: 0;
+                   }
+                    to{
+                        opacity: 1;
+                    }
+                }
+            }
+
+            .groupe_entree, .groupe_plats, .groupe_dessert{   
                 h2{
                     width: 13%;
                     padding-bottom: 1.5%;
@@ -86,6 +127,7 @@
                     background-color: white;
                     font-size: 0.8rem;
                     line-height: 1.6;
+                    position: relative;
                     .nom_plat{
                         display: inline-block;
                         width: 250px;
@@ -115,16 +157,21 @@
                         color: white;
                         text-align: center;
                         line-height: 4;
-                        transform: rotate(0);
-                        overflow: hidden;
+                        position:absolute;
+                        right: -67px;
+
+                        /* Sélection d'un plat */
+
                     }
                     &:hover .choix{
                         width: 23%;
-                        display: block;
-                        transition: width 2s;
-                        transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+                        transform: translate(-67px);
+                        transition: transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                    }
+
+                    &:hover .fas{
                         transform: rotate(360deg);
-                        //transition: transform 500ms ease-in-out;
+                        transition: transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
                     }
                 }
             }
