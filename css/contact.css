@@ -1,0 +1,76 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v27/KFOmCnqEu92Fr1Mu4mxK.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@media (min-width: 320px) and (max-width: 375px) {
+  /* Header */
+  /* Logo */
+  .logo {
+    text-align: center;
+    padding-top: 3.5%;
+    margin-bottom: 3.5%;
+  }
+  .logo img {
+    width: 156.8px;
+    height: 27.88px;
+  }
+
+  /* Section */
+  section {
+    display: flex;
+    height: 336px;
+    background-color: #EAEAEA;
+  }
+  section h1 {
+    text-align: center;
+    margin: auto;
+  }
+
+  /* Footer */
+  #pied_de_page {
+    height: 178px;
+    padding-top: 6%;
+    background-color: #353535;
+    color: white;
+  }
+  #pied_de_page .logo {
+    font-family: "Shrikhand";
+    font-size: 0.95rem;
+    text-align: left;
+    margin-left: 5%;
+    margin-bottom: 5%;
+  }
+  #pied_de_page .menu_pied_de_page {
+    font-size: 0.8rem;
+    line-height: 1.7;
+    margin-left: 5%;
+  }
+  #pied_de_page .menu_pied_de_page .fas.fa-utensils {
+    font-size: 0.7rem;
+  }
+  #pied_de_page .menu_pied_de_page .fas.fa-hands-helping {
+    font-size: 0.5rem;
+  }
+  #pied_de_page .menu_pied_de_page .fas.fa-utensils, #pied_de_page .menu_pied_de_page .fas.fa-hands-helping {
+    margin-right: 1.5%;
+  }
+  #pied_de_page .menu_pied_de_page .proposer_un_restaurant, #pied_de_page .menu_pied_de_page .devenir_partenaire, #pied_de_page .menu_pied_de_page .mentions_legales, #pied_de_page .menu_pied_de_page .contact {
+    color: white;
+  }
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+/*# sourceMappingURL=contact.css.map */

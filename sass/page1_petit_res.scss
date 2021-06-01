@@ -127,7 +127,6 @@
                     background-color: white;
                     font-size: 0.8rem;
                     line-height: 1.6;
-                //    position: relative;
                     .nom_plat{
                         display: inline-block;
                         width: 250px;
@@ -157,14 +156,16 @@
                         color: white;
                         text-align: center;
                         line-height: 4;
-
                     }
                     &:hover .choix{
                         width: 22%;
                         transition: width 1s cubic-bezier(0.1, 0.1, 0.1, 1);
                     }
-
+                    .fas{
+                        visibility: hidden;
+                    }
                     &:hover .fas{
+                        visibility: visible;
                         transform: rotate(360deg);
                         transition: transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
                     }
