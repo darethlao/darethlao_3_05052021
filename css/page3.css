@@ -40,18 +40,18 @@
   }
 
   .image_restaurant img {
-    width: 332.75px;
-    height: 415.8px;
-    margin: -85px 0 0 -10px;
+    width: 354.24px;
+    height: 236.16px;
+    margin: 0 0 0 -20px;
   }
 
   /* Bloc Menu */
   #nom_restaurant {
     position: relative;
-    top: -140px;
+    top: -50px;
     display: flex;
     flex-wrap: wrap;
-    height: 1020px;
+    height: 1000px;
     border-top-left-radius: 35px;
     border-top-right-radius: 35px;
     background-color: #F6F6F6;
@@ -60,7 +60,7 @@
     font-family: "Shrikhand";
     font-size: 1.5rem;
     padding-top: 9%;
-    padding-bottom: 8%;
+    padding-bottom: 5%;
     margin-left: 5%;
   }
   #nom_restaurant .far.fa-heart {
@@ -72,14 +72,7 @@
     width: 100%;
     /* Les plats apparaissent par groupe "Entrée"; "Plat" et "Dessert" */
   }
-  #nom_restaurant #menu_restaurant .groupe_entree {
-    width: 90%;
-    height: 335px;
-    margin-left: 5%;
-    margin-bottom: 8%;
-    background-color: #F6F6F6;
-  }
-  #nom_restaurant #menu_restaurant .groupe_plats, #nom_restaurant #menu_restaurant .groupe_dessert {
+  #nom_restaurant #menu_restaurant .groupe_entree, #nom_restaurant #menu_restaurant .groupe_plats, #nom_restaurant #menu_restaurant .groupe_dessert {
     width: 90%;
     height: 250px;
     margin-left: 5%;
@@ -245,4 +238,4 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-/*# sourceMappingURL=page2.css.map */
+/*# sourceMappingURL=page3.css.map */

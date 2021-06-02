@@ -28,19 +28,19 @@
         overflow: hidden;
     }
     .image_restaurant img{
-        width: 332.75px;
-        height: 415.8px;
-        margin: -85px 0 0 -10px;
+        width: 354.24px;
+        height: 236.16px;
+        margin: 0 0 0 -20px;
     }
 
     /* Bloc Menu */
 
     #nom_restaurant{
         position: relative;
-        top: -140px;
+        top: -50px;
         display: flex;
         flex-wrap: wrap;
-        height: 1020px;
+        height: 1000px;
         border-top-left-radius: 35px;
         border-top-right-radius: 35px;     
         background-color: #F6F6F6;
@@ -48,7 +48,7 @@
             font-family: 'Shrikhand';
             font-size: 1.5rem;
             padding-top: 9%;
-            padding-bottom: 8%;
+            padding-bottom: 5%;
             margin-left: 5%;
         }
         .far.fa-heart{
@@ -58,14 +58,7 @@
         }
         #menu_restaurant{
             width: 100%;
-            .groupe_entree{
-                width: 90%;
-                height: 335px;
-                margin-left: 5%;
-                margin-bottom: 8%;
-                background-color: #F6F6F6;
-            }
-            .groupe_plats, .groupe_dessert{
+            .groupe_entree, .groupe_plats, .groupe_dessert{
                 width: 90%;
                 height: 250px;
                 margin-left: 5%;
@@ -163,6 +156,7 @@
                         color: white;
                         text-align: center;
                         line-height: 4;
+
                     }
                     &:hover .choix{
                         width: 22%;
