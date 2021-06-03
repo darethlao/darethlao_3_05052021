@@ -226,5 +226,26 @@
     color: white;
   }
 }
+@media (width: 375px) {
+  /* Section */
+  #nom_restaurant {
+    top: -160px;
+  }
+  #nom_restaurant .far.fa-heart {
+    margin-left: 20%;
+  }
+
+  .image_restaurant img {
+    width: 384.175px;
+    height: 480.06px;
+    margin: -95px 0 0 0;
+  }
+
+  /* Footer */
+  #pied_de_page {
+    position: relative;
+    top: -38px;
+  }
+}
 
 /*# sourceMappingURL=page2_petit_res.css.map */

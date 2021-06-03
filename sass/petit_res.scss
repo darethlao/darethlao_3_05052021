@@ -4,19 +4,20 @@
 
     /* Loading spinner */
 
-
     .loading{
         display: flex;
         justify-content: center;
         position: fixed;
         z-index: 9999;
     }
+
     .loading--full-height{
         width: 100%;
         height: 100%;
         background: rgba(121, 255, 255, 0.5);
         align-items: center;
     }
+
     .loading::after{
         content:"";
         width: 50px;
@@ -27,10 +28,15 @@
         border-radius: 50%;
         animation: loading 1s linear infinite;
             @keyframes loading{
-                to{
+                from{
                     transform: rotate(1turn);
                 }
             }
+    }
+
+    .loading{
+        visibility: hidden;
+        transition: visibility 1s 3s linear;
     }
 
     /* Logo */
@@ -40,7 +46,7 @@
     .logo{
         img{
             width: $largeurlogo * 0.40;
-            height: $hauteurlogo * 0.41;
+            height: $hauteurlogo * 0.40;
         }
         text-align: center;
         padding-top: 3.5%;

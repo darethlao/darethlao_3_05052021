@@ -203,7 +203,7 @@
   /* Footer */
   #pied_de_page {
     position: relative;
-    top: -50px;
+    top: -55px;
     height: 170px;
     padding-top: 6%;
     background-color: #353535;
@@ -232,6 +232,24 @@
   }
   #pied_de_page .menu_pied_de_page .proposer_un_restaurant, #pied_de_page .menu_pied_de_page .devenir_partenaire, #pied_de_page .menu_pied_de_page .mentions_legales, #pied_de_page .menu_pied_de_page .contact {
     color: white;
+  }
+}
+@media (width: 375px) {
+  /* Section */
+  #nom_restaurant .far.fa-heart {
+    margin-left: 25%;
+  }
+
+  .image_restaurant img {
+    width: 393.6px;
+    height: 262.4px;
+    margin: 0 0 0 -20px;
+  }
+
+  /* Footer */
+  #pied_de_page {
+    position: relative;
+    top: -38px;
   }
 }
 body {

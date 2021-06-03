@@ -27,9 +27,14 @@
     animation: loading 1s linear infinite;
   }
   @keyframes loading {
-    to {
+    from {
       transform: rotate(1turn);
     }
+  }
+
+  .loading {
+    visibility: hidden;
+    transition: visibility 1s 3s linear;
   }
 
   /* Logo */
@@ -40,7 +45,7 @@
   }
   .logo img {
     width: 156.8px;
-    height: 27.88px;
+    height: 27.2px;
   }
 
   /* Section */
