@@ -1,0 +1,43 @@
+    /* Fontionnement */
+
+    #fonctionnement{
+
+        .cartouche1, .cartouche2, .cartouche3{
+            height: 60px;
+            border-radius: 1rem;
+            box-shadow: 5px 5px 15px 5px #E6E6E6;
+            background: #F6F6F6;
+            line-height: 4;
+            font-size: 1rem;
+            font-weight: bold;
+            margin: 0 auto;
+            margin-top: 1%;
+            margin-bottom: 1%;
+            .num_etape{
+                position: relative;
+                right: 8px;
+                padding: 1.5% 3% 1.5% 3%;
+                border-radius: 50%;
+                background-color: #9356DC;
+                font-size: 0.9rem;
+                color: white;
+                margin-right: 3%;
+            }
+            .fas.fa-mobile-alt, .fas.fa-list, .fa-itch-io{
+                font-size: 1.1rem;
+                margin-right: 3%;
+                color: grey;
+            }
+            .etape{
+                color: black;
+            }
+        }
+        .cartouche3{
+            background: rgb(147, 86, 220, 0.15);
+            .fab.fa-itch-io{
+                font-size: 1.1rem;
+                margin-right: 6%;
+                color:#9356DC;
+            }
+        }
+    }
