@@ -1,0 +1,142 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/roboto/v27/KFOmCnqEu92Fr1Mu4mxK.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+body{
+    font-family: 'Roboto', sans-serif;
+
+    /* Header */
+    @import "_entete.scss";
+
+    /* Section */
+
+    .image_restaurant{
+        width: 700px;
+        height: 500px;
+        overflow: hidden;
+//        align-items: center;
+        margin-bottom: 2.8%;
+        margin:auto;
+        /* Image 1 */
+        .image_palette{
+            $width_image1: 3936px;
+            $height_image1: 2624px;
+            $coef_image1: 0.2;
+            img{
+                width: $width_image1 * $coef_image1;
+                height: $height_image1 * $coef_image1;
+                margin: 0 0 0 0;
+            }
+        }
+        /* Image 2 */
+        .image_note{
+            $width_image2: 3024px;
+            $height_image2: 3780px;
+            $coef_image2: 0.3;
+            img{
+                width: $width_image2 * $coef_image2;
+                height: $height_image2 * $coef_image2;
+                margin: -400px 0 0 -30px;
+            }
+        }
+        /* Image 3 */
+        .image_francaise{
+            $width_image3: 4402px;
+            $height_image3: 2935px;
+            $coef_image3: 0.2;
+            .img{
+                width: $width_image3 * $coef_image3;
+                height: $height_image3 * $coef_image3;
+                margin: 0 0 0 0;
+            }
+        }
+        /* Image 4 */
+        .image_delice{
+            $width_image4: 5043px;
+            $height_image4: 3456px;
+            $coef_image4: 0.2;
+            .img{
+                width: $width_image4 * $coef_image4;
+                height: $height_image4 * $coef_image4;
+                margin: -68px 0 0 0;
+            }
+        }
+    }
+    /* Bloc Menu */
+    @import "_bloc-menu.scss";
+
+    /* Footer */
+    @import "footer.scss";
+}
+
+@media (max-width: 375px){
+
+    body{
+    
+        /* Section */
+    
+        .image_restaurant{
+            width: 100%;
+            height: 10%;
+            overflow: hidden;
+        }
+        $width_image1: 3936px;
+        $height_image1: 2624px;
+        $coef_image1: 0.095;
+        .image_restaurant img{
+            width: $width_image1 * $coef_image1;
+            height: $height_image1 * $coef_image1;
+            margin: -5px 0 0 0;
+        }
+    
+        /* Bloc Menu */
+
+            @import "_bloc-menu.scss";
+
+            h1{
+                padding-right: 20%;
+            }
+    }
+}
+
+@media (max-width: 320px){
+
+    body{
+    
+        /* Section */
+    
+        .image_restaurant{
+            width: 100%;
+            height: 10%;
+            overflow: hidden;
+        }
+        $width_image1: 3936px;
+        $height_image1: 2624px;
+        $coef_image1: 0.09;
+        .image_restaurant img{
+            width: $width_image1 * $coef_image1;
+            height: $height_image1 * $coef_image1;
+            margin: 0 0 0 -20px;
+        }
+    
+        /* Bloc Menu */
+
+            @import "_bloc-menu.scss";
+            
+            h1{
+                padding-right: 7%;
+            }
+    }
+}
