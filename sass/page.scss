@@ -56,7 +56,7 @@ body{
             $width_image3: 4402px;
             $height_image3: 2935px;
             $coef_image3: 0.2;
-            .img{
+            img{
                 width: $width_image3 * $coef_image3;
                 height: $height_image3 * $coef_image3;
                 margin: 0 0 0 0;
@@ -67,7 +67,7 @@ body{
             $width_image4: 5043px;
             $height_image4: 3456px;
             $coef_image4: 0.2;
-            .img{
+            img{
                 width: $width_image4 * $coef_image4;
                 height: $height_image4 * $coef_image4;
                 margin: -68px 0 0 0;
@@ -81,7 +81,7 @@ body{
     @import "footer.scss";
 }
 
-@media (max-width: 375px){
+@media (max-width :375px){
 
     body{
     
@@ -91,19 +91,21 @@ body{
             width: 100%;
             height: 10%;
             overflow: hidden;
+            .image_palette{
+                $width_image1: 3936px;
+                $height_image1: 2624px;
+                $coef_image1: 0.095;
+                img{
+                    width: $width_image1 * $coef_image1;
+                    height: $height_image1 * $coef_image1;
+                    margin: -5px 0 0 0;
+                }
+            }
         }
-        $width_image1: 3936px;
-        $height_image1: 2624px;
-        $coef_image1: 0.095;
-        .image_restaurant img{
-            width: $width_image1 * $coef_image1;
-            height: $height_image1 * $coef_image1;
-            margin: -5px 0 0 0;
-        }
-    
+
         /* Bloc Menu */
 
-            @import "_bloc-menu.scss";
+        @import "_bloc-menu.scss";
 
             h1{
                 padding-right: 20%;
@@ -122,13 +124,15 @@ body{
             height: 10%;
             overflow: hidden;
         }
-        $width_image1: 3936px;
-        $height_image1: 2624px;
-        $coef_image1: 0.09;
-        .image_restaurant img{
-            width: $width_image1 * $coef_image1;
-            height: $height_image1 * $coef_image1;
-            margin: 0 0 0 -20px;
+            .image_palette{
+            $width_image1: 3936px;
+            $height_image1: 2624px;
+            $coef_image1: 0.09;
+            img{
+                width: $width_image1 * $coef_image1;
+                height: $height_image1 * $coef_image1;
+                margin: 0 0 0 -20px;
+            }
         }
     
         /* Bloc Menu */

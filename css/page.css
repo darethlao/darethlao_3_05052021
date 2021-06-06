@@ -45,6 +45,13 @@ body #titre_principal .logo img {
   body {
     /* Logo */
   }
+  body #titre_principal_accueil .logo {
+    text-align: center;
+  }
+  body #titre_principal_accueil .logo img {
+    width: 148.96px;
+    height: 25.84px;
+  }
   body #titre_principal {
     flex-wrap: wrap;
     justify-content: left;
@@ -56,7 +63,6 @@ body #titre_principal .logo img {
     font-size: 1rem;
   }
   body #titre_principal .logo {
-    text-align: center;
     padding-top: 2%;
     margin-bottom: 1%;
   }
@@ -86,12 +92,12 @@ body .image_restaurant .image_note img {
   height: 1134px;
   margin: -400px 0 0 -30px;
 }
-body .image_restaurant .image_francaise .img {
+body .image_restaurant .image_francaise img {
   width: 880.4px;
   height: 587px;
   margin: 0 0 0 0;
 }
-body .image_restaurant .image_delice .img {
+body .image_restaurant .image_delice img {
   width: 1008.6px;
   height: 691.2px;
   margin: -68px 0 0 0;
@@ -102,6 +108,7 @@ body .carte_restaurant {
   justify-content: center;
   height: 800px;
   background-color: #F6F6F6;
+  padding-bottom: 10%;
 }
 body .carte_restaurant .nom_restaurant {
   width: 100%;
@@ -128,8 +135,8 @@ body .carte_restaurant .menu_restaurant {
 }
 body .carte_restaurant .menu_restaurant .groupe_entree, body .carte_restaurant .menu_restaurant .groupe_plats, body .carte_restaurant .menu_restaurant .groupe_dessert {
   width: 25%;
-  height: 250px;
-  margin-bottom: 8%;
+  height: 340px;
+  margin-bottom: 5%;
   background-color: #F6F6F6;
 }
 body .carte_restaurant .menu_restaurant .groupe_entree {
@@ -178,6 +185,7 @@ body .carte_restaurant .menu_restaurant .groupe_entree h2, body .carte_restauran
 }
 body .carte_restaurant .menu_restaurant .groupe_entree .plat, body .carte_restaurant .menu_restaurant .groupe_plats .plat, body .carte_restaurant .menu_restaurant .groupe_dessert .plat {
   display: flex;
+  width: 95%;
   justify-content: space-between;
   height: 75px;
   padding-left: 3%;
@@ -228,7 +236,7 @@ body .carte_restaurant .menu_restaurant .groupe_entree .plat .fas, body .carte_r
 body .carte_restaurant .menu_restaurant .groupe_entree .plat:hover .fas, body .carte_restaurant .menu_restaurant .groupe_plats .plat:hover .fas, body .carte_restaurant .menu_restaurant .groupe_dessert .plat:hover .fas {
   visibility: visible;
   transform: rotate(360deg);
-  transition: transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: transform 400ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 body .carte_restaurant .bouton {
   width: 25%;
@@ -239,9 +247,6 @@ body .carte_restaurant .bouton {
   text-align: center;
   line-height: 2.5;
   font-size: 2rem;
-  margin-left: 5%;
-  margin-right: 5%;
-  margin-bottom: 5%;
   cursor: pointer;
   transition: all 400ms;
 }
@@ -252,167 +257,201 @@ body .carte_restaurant .bouton:hover {
 body .carte_restaurant .bouton .commander {
   color: white;
 }
-@media (max-width: 375px) {
+@media (min-width: 376px) and (max-width: 1025px) {
   body {
     /* Bloc Menu */
   }
   body .carte_restaurant {
+    height: 530px;
+  }
+  body .carte_restaurant .menu_restaurant {
+    height: 240px;
+  }
+  body .carte_restaurant .menu_restaurant .groupe_entree, body .carte_restaurant .menu_restaurant .groupe_plats, body .carte_restaurant .menu_restaurant .groupe_dessert {
+    width: 28%;
+    height: 290px;
+    margin-bottom: 5%;
+    background-color: #f6f6f6;
+  }
+  body .carte_restaurant .menu_restaurant .groupe_entree h2, body .carte_restaurant .menu_restaurant .groupe_plats h2, body .carte_restaurant .menu_restaurant .groupe_dessert h2 {
+    font-size: 1rem;
+  }
+  body .carte_restaurant .menu_restaurant .groupe_entree .plat, body .carte_restaurant .menu_restaurant .groupe_plats .plat, body .carte_restaurant .menu_restaurant .groupe_dessert .plat {
+    height: 62px;
+    padding-left: 3%;
+    font-size: 0.8rem;
+  }
+  body .carte_restaurant .menu_restaurant .groupe_entree .plat .nom_plat, body .carte_restaurant .menu_restaurant .groupe_plats .plat .nom_plat, body .carte_restaurant .menu_restaurant .groupe_dessert .plat .nom_plat {
+    width: 250px;
+  }
+  body .carte_restaurant .menu_restaurant .groupe_entree .plat .nom_plat .titre_plat, body .carte_restaurant .menu_restaurant .groupe_plats .plat .nom_plat .titre_plat, body .carte_restaurant .menu_restaurant .groupe_dessert .plat .nom_plat .titre_plat {
+    font-size: 1rem;
+  }
+  body .carte_restaurant .menu_restaurant .groupe_entree .plat .prix, body .carte_restaurant .menu_restaurant .groupe_plats .plat .prix, body .carte_restaurant .menu_restaurant .groupe_dessert .plat .prix {
+    padding-top: 11.5%;
+  }
+  body .carte_restaurant .menu_restaurant .groupe_entree .plat .choix, body .carte_restaurant .menu_restaurant .groupe_plats .plat .choix, body .carte_restaurant .menu_restaurant .groupe_dessert .plat .choix {
+    height: 62px;
+    font-size: 0.8rem;
+    line-height: 4;
+    line-height: 5;
+  }
+  body .carte_restaurant .bouton {
+    width: 25%;
+    height: 60px;
+    border-radius: 10rem;
+    line-height: 2.5;
+    font-size: 1.5rem;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+}
+@media (max-width: 375px) {
+  body section .carte_restaurant {
+    display: block;
     position: relative;
     top: -62px;
-    height: 1000px;
+    height: 1100px;
+    background-color: #f6f6f6;
     border-top-left-radius: 35px;
     border-top-right-radius: 35px;
   }
-  body .carte_restaurant .nom_restaurant {
+  body section .carte_restaurant .nom_restaurant {
     display: flex;
     width: 100%;
     margin-bottom: 5%;
   }
-  body .carte_restaurant .nom_restaurant h1 {
+  body section .carte_restaurant .nom_restaurant h1 {
     font-size: 1.5rem;
     padding-top: 9%;
     padding-bottom: 5%;
     padding-left: 5%;
     margin: 0;
   }
-  body .carte_restaurant .nom_restaurant .far.fa-heart {
+  body section .carte_restaurant .nom_restaurant .far.fa-heart {
     padding-top: 10.5%;
     padding-right: 0;
     margin: 0;
     font-size: 1.35rem;
   }
-  body .carte_restaurant .menu_restaurant {
+  body section .carte_restaurant .menu_restaurant {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    /* Les plats apparaissent par groupe "Entrée"; "Plat" et "Dessert" */
+    margin-bottom: 10%;
   }
-  body .carte_restaurant .menu_restaurant .groupe_entree, body .carte_restaurant .menu_restaurant .groupe_plats, body .carte_restaurant .menu_restaurant .groupe_dessert {
+  body section .carte_restaurant .menu_restaurant .groupe_entree, body section .carte_restaurant .menu_restaurant .groupe_plats, body section .carte_restaurant .menu_restaurant .groupe_dessert {
     width: 90%;
     height: 250px;
     margin-left: 5%;
     margin-bottom: 8%;
     background-color: #F6F6F6;
   }
-  body .carte_restaurant .menu_restaurant .groupe_entree h2, body .carte_restaurant .menu_restaurant .groupe_plats h2, body .carte_restaurant .menu_restaurant .groupe_dessert h2 {
-    width: 13%;
-    padding-bottom: 1.5%;
-    margin-bottom: 4%;
-    border-bottom: solid 2px #99E2D0;
+  body section .carte_restaurant .menu_restaurant .groupe_entree h2, body section .carte_restaurant .menu_restaurant .groupe_plats h2, body section .carte_restaurant .menu_restaurant .groupe_dessert h2 {
     font-size: 0.9rem;
-    color: #9A9A9A;
   }
-  body .carte_restaurant .menu_restaurant .groupe_entree .plat, body .carte_restaurant .menu_restaurant .groupe_plats .plat, body .carte_restaurant .menu_restaurant .groupe_dessert .plat {
-    display: flex;
-    justify-content: space-between;
+  body section .carte_restaurant .menu_restaurant .groupe_entree .plat, body section .carte_restaurant .menu_restaurant .groupe_plats .plat, body section .carte_restaurant .menu_restaurant .groupe_dessert .plat {
     height: 62px;
     padding-left: 3%;
-    margin-bottom: 4%;
-    border-radius: 15px;
-    box-shadow: 5px 5px 15px 5px #E6E6E6;
-    background-color: white;
     font-size: 0.8rem;
-    line-height: 1.6;
   }
-  body .carte_restaurant .menu_restaurant .groupe_entree .plat .nom_plat, body .carte_restaurant .menu_restaurant .groupe_plats .plat .nom_plat, body .carte_restaurant .menu_restaurant .groupe_dessert .plat .nom_plat {
-    display: inline-block;
+  body section .carte_restaurant .menu_restaurant .groupe_entree .plat .nom_plat, body section .carte_restaurant .menu_restaurant .groupe_plats .plat .nom_plat, body section .carte_restaurant .menu_restaurant .groupe_dessert .plat .nom_plat {
     width: 250px;
-    padding-top: 2.5%;
-    position: relative;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
   }
-  body .carte_restaurant .menu_restaurant .groupe_entree .plat .nom_plat .titre_plat, body .carte_restaurant .menu_restaurant .groupe_plats .plat .nom_plat .titre_plat, body .carte_restaurant .menu_restaurant .groupe_dessert .plat .nom_plat .titre_plat {
+  body section .carte_restaurant .menu_restaurant .groupe_entree .plat .nom_plat .titre_plat, body section .carte_restaurant .menu_restaurant .groupe_plats .plat .nom_plat .titre_plat, body section .carte_restaurant .menu_restaurant .groupe_dessert .plat .nom_plat .titre_plat {
     font-size: 1rem;
-    font-weight: bold;
   }
-  body .carte_restaurant .menu_restaurant .groupe_entree .plat .prix, body .carte_restaurant .menu_restaurant .groupe_plats .plat .prix, body .carte_restaurant .menu_restaurant .groupe_dessert .plat .prix {
-    width: 19%;
-    height: 55px;
+  body section .carte_restaurant .menu_restaurant .groupe_entree .plat .prix, body section .carte_restaurant .menu_restaurant .groupe_plats .plat .prix, body section .carte_restaurant .menu_restaurant .groupe_dessert .plat .prix {
     padding-top: 11.5%;
-    text-align: center;
   }
-  body .carte_restaurant .menu_restaurant .groupe_entree .plat .choix, body .carte_restaurant .menu_restaurant .groupe_plats .plat .choix, body .carte_restaurant .menu_restaurant .groupe_dessert .plat .choix {
-    width: 0;
+  body section .carte_restaurant .menu_restaurant .groupe_entree .plat .choix, body section .carte_restaurant .menu_restaurant .groupe_plats .plat .choix, body section .carte_restaurant .menu_restaurant .groupe_dessert .plat .choix {
     height: 62px;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-    background-color: #99E2D0;
     font-size: 1rem;
-    color: white;
-    text-align: center;
     line-height: 4;
   }
-  body .carte_restaurant .menu_restaurant .groupe_entree .plat:hover .choix, body .carte_restaurant .menu_restaurant .groupe_plats .plat:hover .choix, body .carte_restaurant .menu_restaurant .groupe_dessert .plat:hover .choix {
+  body section .carte_restaurant .menu_restaurant .groupe_entree .plat:hover .choix, body section .carte_restaurant .menu_restaurant .groupe_plats .plat:hover .choix, body section .carte_restaurant .menu_restaurant .groupe_dessert .plat:hover .choix {
     width: 22%;
-    transition: width 1s cubic-bezier(0.1, 0.1, 0.1, 1);
   }
-  body .carte_restaurant .menu_restaurant .groupe_entree .plat .fas, body .carte_restaurant .menu_restaurant .groupe_plats .plat .fas, body .carte_restaurant .menu_restaurant .groupe_dessert .plat .fas {
-    visibility: hidden;
-  }
-  body .carte_restaurant .menu_restaurant .groupe_entree .plat:hover .fas, body .carte_restaurant .menu_restaurant .groupe_plats .plat:hover .fas, body .carte_restaurant .menu_restaurant .groupe_dessert .plat:hover .fas {
-    visibility: visible;
-    transform: rotate(360deg);
-    transition: transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  }
-  body .carte_restaurant .menu_restaurant .groupe_entree {
-    animation-delay: 10ms;
-    animation: fadein 1s;
-  }
-  @keyframes fadein {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  body .carte_restaurant .menu_restaurant .groupe_plats {
-    animation-delay: 200ms;
-    animation: fadein 3s;
-  }
-  @keyframes fadein {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  body .carte_restaurant .menu_restaurant .groupe_dessert {
-    animation-delay: 800ms;
-    animation: fadein 5s;
-  }
-  @keyframes fadein {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  body .carte_restaurant .bouton {
+  body section .carte_restaurant .bouton {
     width: 50%;
     height: 46px;
     border-radius: 10rem;
-    background: linear-gradient(#ff79da, #9356dc);
-    box-shadow: 2px 2px 2px rgba(82, 81, 81, 0.9);
-    text-align: center;
+    margin: auto;
     line-height: 3.2;
     font-size: 0.9rem;
-    margin: auto;
-    margin-top: 10%;
+  }
+}
+@media (max-width: 320px) {
+  body section .carte_restaurant {
+    height: 1050px;
+    background-color: #f6f6f6;
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+  }
+  body section .carte_restaurant .nom_restaurant {
+    display: flex;
+    width: 100%;
+    margin-bottom: 5%;
+  }
+  body section .carte_restaurant .nom_restaurant h1 {
+    font-size: 1.5rem;
+    padding-top: 9%;
+    padding-bottom: 5%;
+    padding-left: 5%;
+    margin: 0;
+  }
+  body section .carte_restaurant .nom_restaurant .far.fa-heart {
+    padding-top: 10.5%;
+    padding-right: 0;
+    margin: 0;
+    font-size: 1.35rem;
+  }
+  body section .carte_restaurant .menu_restaurant {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
     margin-bottom: 10%;
-    cursor: pointer;
-    transition: all 400ms;
   }
-  body .carte_restaurant .bouton:hover {
-    background: linear-gradient(rgba(255, 121, 218, 0.9), rgba(147, 86, 220, 0.9));
-    box-shadow: 2px 5px 5px #525151;
+  body section .carte_restaurant .menu_restaurant .groupe_entree, body section .carte_restaurant .menu_restaurant .groupe_plats, body section .carte_restaurant .menu_restaurant .groupe_dessert {
+    width: 90%;
+    height: 250px;
+    margin-left: 5%;
+    margin-bottom: 8%;
+    background-color: #F6F6F6;
   }
-  body .carte_restaurant .bouton .commander {
-    color: white;
+  body section .carte_restaurant .menu_restaurant .groupe_entree h2, body section .carte_restaurant .menu_restaurant .groupe_plats h2, body section .carte_restaurant .menu_restaurant .groupe_dessert h2 {
+    font-size: 0.9rem;
+  }
+  body section .carte_restaurant .menu_restaurant .groupe_entree .plat, body section .carte_restaurant .menu_restaurant .groupe_plats .plat, body section .carte_restaurant .menu_restaurant .groupe_dessert .plat {
+    height: 62px;
+    padding-left: 3%;
+    font-size: 0.8rem;
+  }
+  body section .carte_restaurant .menu_restaurant .groupe_entree .plat .nom_plat, body section .carte_restaurant .menu_restaurant .groupe_plats .plat .nom_plat, body section .carte_restaurant .menu_restaurant .groupe_dessert .plat .nom_plat {
+    width: 250px;
+  }
+  body section .carte_restaurant .menu_restaurant .groupe_entree .plat .nom_plat .titre_plat, body section .carte_restaurant .menu_restaurant .groupe_plats .plat .nom_plat .titre_plat, body section .carte_restaurant .menu_restaurant .groupe_dessert .plat .nom_plat .titre_plat {
+    font-size: 1rem;
+  }
+  body section .carte_restaurant .menu_restaurant .groupe_entree .plat .prix, body section .carte_restaurant .menu_restaurant .groupe_plats .plat .prix, body section .carte_restaurant .menu_restaurant .groupe_dessert .plat .prix {
+    padding-top: 11.5%;
+  }
+  body section .carte_restaurant .menu_restaurant .groupe_entree .plat .choix, body section .carte_restaurant .menu_restaurant .groupe_plats .plat .choix, body section .carte_restaurant .menu_restaurant .groupe_dessert .plat .choix {
+    height: 62px;
+    font-size: 1rem;
+    line-height: 4;
+  }
+  body section .carte_restaurant .menu_restaurant .groupe_entree .plat:hover .choix, body section .carte_restaurant .menu_restaurant .groupe_plats .plat:hover .choix, body section .carte_restaurant .menu_restaurant .groupe_dessert .plat:hover .choix {
+    width: 22%;
+  }
+  body section .carte_restaurant .bouton {
+    width: 50%;
+    height: 46px;
+    border-radius: 10rem;
+    margin: auto;
+    line-height: 3.2;
+    font-size: 0.9rem;
   }
 }
 body #pied_de_page {
@@ -446,11 +485,14 @@ body #pied_de_page .menu_pied_de_page .fas.fa-utensils, body #pied_de_page .menu
 body #pied_de_page .menu_pied_de_page .proposer_un_restaurant, body #pied_de_page .menu_pied_de_page .devenir_partenaire, body #pied_de_page .menu_pied_de_page .mentions_legales, body #pied_de_page .menu_pied_de_page .contact {
   color: white;
 }
-@media (max-width: 376px) {
+@media (max-width: 375px) {
   body {
     /* Footer */
   }
   body #pied_de_page {
+    position: absolute;
+    top: 1348px;
+    width: 100%;
     height: 178px;
     padding-top: 6%;
   }
@@ -474,6 +516,14 @@ body #pied_de_page .menu_pied_de_page .proposer_un_restaurant, body #pied_de_pag
     margin-right: 1.5%;
   }
 }
+@media (max-width: 320px) {
+  body {
+    /* Footer */
+  }
+  body #pied_de_page {
+    top: 1294px;
+  }
+}
 
 @media (max-width: 375px) {
   body {
@@ -486,7 +536,7 @@ body #pied_de_page .menu_pied_de_page .proposer_un_restaurant, body #pied_de_pag
     height: 10%;
     overflow: hidden;
   }
-  body .image_restaurant img {
+  body .image_restaurant .image_palette img {
     width: 373.92px;
     height: 249.28px;
     margin: -5px 0 0 0;
@@ -497,6 +547,7 @@ body #pied_de_page .menu_pied_de_page .proposer_un_restaurant, body #pied_de_pag
     justify-content: center;
     height: 800px;
     background-color: #F6F6F6;
+    padding-bottom: 10%;
   }
   body .carte_restaurant .nom_restaurant {
     width: 100%;
@@ -523,8 +574,8 @@ body #pied_de_page .menu_pied_de_page .proposer_un_restaurant, body #pied_de_pag
   }
   body .carte_restaurant .menu_restaurant .groupe_entree, body .carte_restaurant .menu_restaurant .groupe_plats, body .carte_restaurant .menu_restaurant .groupe_dessert {
     width: 25%;
-    height: 250px;
-    margin-bottom: 8%;
+    height: 340px;
+    margin-bottom: 5%;
     background-color: #F6F6F6;
   }
   body .carte_restaurant .menu_restaurant .groupe_entree {
@@ -573,6 +624,7 @@ body #pied_de_page .menu_pied_de_page .proposer_un_restaurant, body #pied_de_pag
   }
   body .carte_restaurant .menu_restaurant .groupe_entree .plat, body .carte_restaurant .menu_restaurant .groupe_plats .plat, body .carte_restaurant .menu_restaurant .groupe_dessert .plat {
     display: flex;
+    width: 95%;
     justify-content: space-between;
     height: 75px;
     padding-left: 3%;
@@ -623,7 +675,7 @@ body #pied_de_page .menu_pied_de_page .proposer_un_restaurant, body #pied_de_pag
   body .carte_restaurant .menu_restaurant .groupe_entree .plat:hover .fas, body .carte_restaurant .menu_restaurant .groupe_plats .plat:hover .fas, body .carte_restaurant .menu_restaurant .groupe_dessert .plat:hover .fas {
     visibility: visible;
     transform: rotate(360deg);
-    transition: transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: transform 400ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
   body .carte_restaurant .bouton {
     width: 25%;
@@ -634,9 +686,6 @@ body #pied_de_page .menu_pied_de_page .proposer_un_restaurant, body #pied_de_pag
     text-align: center;
     line-height: 2.5;
     font-size: 2rem;
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-bottom: 5%;
     cursor: pointer;
     transition: all 400ms;
   }
@@ -648,167 +697,201 @@ body #pied_de_page .menu_pied_de_page .proposer_un_restaurant, body #pied_de_pag
     color: white;
   }
 }
-@media (max-width: 375px) and (max-width: 375px) {
+@media (max-width: 375px) and (min-width: 376px) and (max-width: 1025px) {
   body {
     /* Bloc Menu */
   }
   body .carte_restaurant {
+    height: 530px;
+  }
+  body .carte_restaurant .menu_restaurant {
+    height: 240px;
+  }
+  body .carte_restaurant .menu_restaurant .groupe_entree, body .carte_restaurant .menu_restaurant .groupe_plats, body .carte_restaurant .menu_restaurant .groupe_dessert {
+    width: 28%;
+    height: 290px;
+    margin-bottom: 5%;
+    background-color: #f6f6f6;
+  }
+  body .carte_restaurant .menu_restaurant .groupe_entree h2, body .carte_restaurant .menu_restaurant .groupe_plats h2, body .carte_restaurant .menu_restaurant .groupe_dessert h2 {
+    font-size: 1rem;
+  }
+  body .carte_restaurant .menu_restaurant .groupe_entree .plat, body .carte_restaurant .menu_restaurant .groupe_plats .plat, body .carte_restaurant .menu_restaurant .groupe_dessert .plat {
+    height: 62px;
+    padding-left: 3%;
+    font-size: 0.8rem;
+  }
+  body .carte_restaurant .menu_restaurant .groupe_entree .plat .nom_plat, body .carte_restaurant .menu_restaurant .groupe_plats .plat .nom_plat, body .carte_restaurant .menu_restaurant .groupe_dessert .plat .nom_plat {
+    width: 250px;
+  }
+  body .carte_restaurant .menu_restaurant .groupe_entree .plat .nom_plat .titre_plat, body .carte_restaurant .menu_restaurant .groupe_plats .plat .nom_plat .titre_plat, body .carte_restaurant .menu_restaurant .groupe_dessert .plat .nom_plat .titre_plat {
+    font-size: 1rem;
+  }
+  body .carte_restaurant .menu_restaurant .groupe_entree .plat .prix, body .carte_restaurant .menu_restaurant .groupe_plats .plat .prix, body .carte_restaurant .menu_restaurant .groupe_dessert .plat .prix {
+    padding-top: 11.5%;
+  }
+  body .carte_restaurant .menu_restaurant .groupe_entree .plat .choix, body .carte_restaurant .menu_restaurant .groupe_plats .plat .choix, body .carte_restaurant .menu_restaurant .groupe_dessert .plat .choix {
+    height: 62px;
+    font-size: 0.8rem;
+    line-height: 4;
+    line-height: 5;
+  }
+  body .carte_restaurant .bouton {
+    width: 25%;
+    height: 60px;
+    border-radius: 10rem;
+    line-height: 2.5;
+    font-size: 1.5rem;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+}
+@media (max-width: 375px) and (max-width: 375px) {
+  body section .carte_restaurant {
+    display: block;
     position: relative;
     top: -62px;
-    height: 1000px;
+    height: 1100px;
+    background-color: #f6f6f6;
     border-top-left-radius: 35px;
     border-top-right-radius: 35px;
   }
-  body .carte_restaurant .nom_restaurant {
+  body section .carte_restaurant .nom_restaurant {
     display: flex;
     width: 100%;
     margin-bottom: 5%;
   }
-  body .carte_restaurant .nom_restaurant h1 {
+  body section .carte_restaurant .nom_restaurant h1 {
     font-size: 1.5rem;
     padding-top: 9%;
     padding-bottom: 5%;
     padding-left: 5%;
     margin: 0;
   }
-  body .carte_restaurant .nom_restaurant .far.fa-heart {
+  body section .carte_restaurant .nom_restaurant .far.fa-heart {
     padding-top: 10.5%;
     padding-right: 0;
     margin: 0;
     font-size: 1.35rem;
   }
-  body .carte_restaurant .menu_restaurant {
+  body section .carte_restaurant .menu_restaurant {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    /* Les plats apparaissent par groupe "Entrée"; "Plat" et "Dessert" */
+    margin-bottom: 10%;
   }
-  body .carte_restaurant .menu_restaurant .groupe_entree, body .carte_restaurant .menu_restaurant .groupe_plats, body .carte_restaurant .menu_restaurant .groupe_dessert {
+  body section .carte_restaurant .menu_restaurant .groupe_entree, body section .carte_restaurant .menu_restaurant .groupe_plats, body section .carte_restaurant .menu_restaurant .groupe_dessert {
     width: 90%;
     height: 250px;
     margin-left: 5%;
     margin-bottom: 8%;
     background-color: #F6F6F6;
   }
-  body .carte_restaurant .menu_restaurant .groupe_entree h2, body .carte_restaurant .menu_restaurant .groupe_plats h2, body .carte_restaurant .menu_restaurant .groupe_dessert h2 {
-    width: 13%;
-    padding-bottom: 1.5%;
-    margin-bottom: 4%;
-    border-bottom: solid 2px #99E2D0;
+  body section .carte_restaurant .menu_restaurant .groupe_entree h2, body section .carte_restaurant .menu_restaurant .groupe_plats h2, body section .carte_restaurant .menu_restaurant .groupe_dessert h2 {
     font-size: 0.9rem;
-    color: #9A9A9A;
   }
-  body .carte_restaurant .menu_restaurant .groupe_entree .plat, body .carte_restaurant .menu_restaurant .groupe_plats .plat, body .carte_restaurant .menu_restaurant .groupe_dessert .plat {
-    display: flex;
-    justify-content: space-between;
+  body section .carte_restaurant .menu_restaurant .groupe_entree .plat, body section .carte_restaurant .menu_restaurant .groupe_plats .plat, body section .carte_restaurant .menu_restaurant .groupe_dessert .plat {
     height: 62px;
     padding-left: 3%;
-    margin-bottom: 4%;
-    border-radius: 15px;
-    box-shadow: 5px 5px 15px 5px #E6E6E6;
-    background-color: white;
     font-size: 0.8rem;
-    line-height: 1.6;
   }
-  body .carte_restaurant .menu_restaurant .groupe_entree .plat .nom_plat, body .carte_restaurant .menu_restaurant .groupe_plats .plat .nom_plat, body .carte_restaurant .menu_restaurant .groupe_dessert .plat .nom_plat {
-    display: inline-block;
+  body section .carte_restaurant .menu_restaurant .groupe_entree .plat .nom_plat, body section .carte_restaurant .menu_restaurant .groupe_plats .plat .nom_plat, body section .carte_restaurant .menu_restaurant .groupe_dessert .plat .nom_plat {
     width: 250px;
-    padding-top: 2.5%;
-    position: relative;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
   }
-  body .carte_restaurant .menu_restaurant .groupe_entree .plat .nom_plat .titre_plat, body .carte_restaurant .menu_restaurant .groupe_plats .plat .nom_plat .titre_plat, body .carte_restaurant .menu_restaurant .groupe_dessert .plat .nom_plat .titre_plat {
+  body section .carte_restaurant .menu_restaurant .groupe_entree .plat .nom_plat .titre_plat, body section .carte_restaurant .menu_restaurant .groupe_plats .plat .nom_plat .titre_plat, body section .carte_restaurant .menu_restaurant .groupe_dessert .plat .nom_plat .titre_plat {
     font-size: 1rem;
-    font-weight: bold;
   }
-  body .carte_restaurant .menu_restaurant .groupe_entree .plat .prix, body .carte_restaurant .menu_restaurant .groupe_plats .plat .prix, body .carte_restaurant .menu_restaurant .groupe_dessert .plat .prix {
-    width: 19%;
-    height: 55px;
+  body section .carte_restaurant .menu_restaurant .groupe_entree .plat .prix, body section .carte_restaurant .menu_restaurant .groupe_plats .plat .prix, body section .carte_restaurant .menu_restaurant .groupe_dessert .plat .prix {
     padding-top: 11.5%;
-    text-align: center;
   }
-  body .carte_restaurant .menu_restaurant .groupe_entree .plat .choix, body .carte_restaurant .menu_restaurant .groupe_plats .plat .choix, body .carte_restaurant .menu_restaurant .groupe_dessert .plat .choix {
-    width: 0;
+  body section .carte_restaurant .menu_restaurant .groupe_entree .plat .choix, body section .carte_restaurant .menu_restaurant .groupe_plats .plat .choix, body section .carte_restaurant .menu_restaurant .groupe_dessert .plat .choix {
     height: 62px;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-    background-color: #99E2D0;
     font-size: 1rem;
-    color: white;
-    text-align: center;
     line-height: 4;
   }
-  body .carte_restaurant .menu_restaurant .groupe_entree .plat:hover .choix, body .carte_restaurant .menu_restaurant .groupe_plats .plat:hover .choix, body .carte_restaurant .menu_restaurant .groupe_dessert .plat:hover .choix {
+  body section .carte_restaurant .menu_restaurant .groupe_entree .plat:hover .choix, body section .carte_restaurant .menu_restaurant .groupe_plats .plat:hover .choix, body section .carte_restaurant .menu_restaurant .groupe_dessert .plat:hover .choix {
     width: 22%;
-    transition: width 1s cubic-bezier(0.1, 0.1, 0.1, 1);
   }
-  body .carte_restaurant .menu_restaurant .groupe_entree .plat .fas, body .carte_restaurant .menu_restaurant .groupe_plats .plat .fas, body .carte_restaurant .menu_restaurant .groupe_dessert .plat .fas {
-    visibility: hidden;
-  }
-  body .carte_restaurant .menu_restaurant .groupe_entree .plat:hover .fas, body .carte_restaurant .menu_restaurant .groupe_plats .plat:hover .fas, body .carte_restaurant .menu_restaurant .groupe_dessert .plat:hover .fas {
-    visibility: visible;
-    transform: rotate(360deg);
-    transition: transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  }
-  body .carte_restaurant .menu_restaurant .groupe_entree {
-    animation-delay: 10ms;
-    animation: fadein 1s;
-  }
-  @keyframes fadein {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  body .carte_restaurant .menu_restaurant .groupe_plats {
-    animation-delay: 200ms;
-    animation: fadein 3s;
-  }
-  @keyframes fadein {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  body .carte_restaurant .menu_restaurant .groupe_dessert {
-    animation-delay: 800ms;
-    animation: fadein 5s;
-  }
-  @keyframes fadein {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  body .carte_restaurant .bouton {
+  body section .carte_restaurant .bouton {
     width: 50%;
     height: 46px;
     border-radius: 10rem;
-    background: linear-gradient(#ff79da, #9356dc);
-    box-shadow: 2px 2px 2px rgba(82, 81, 81, 0.9);
-    text-align: center;
+    margin: auto;
     line-height: 3.2;
     font-size: 0.9rem;
-    margin: auto;
-    margin-top: 10%;
+  }
+}
+@media (max-width: 375px) and (max-width: 320px) {
+  body section .carte_restaurant {
+    height: 1050px;
+    background-color: #f6f6f6;
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+  }
+  body section .carte_restaurant .nom_restaurant {
+    display: flex;
+    width: 100%;
+    margin-bottom: 5%;
+  }
+  body section .carte_restaurant .nom_restaurant h1 {
+    font-size: 1.5rem;
+    padding-top: 9%;
+    padding-bottom: 5%;
+    padding-left: 5%;
+    margin: 0;
+  }
+  body section .carte_restaurant .nom_restaurant .far.fa-heart {
+    padding-top: 10.5%;
+    padding-right: 0;
+    margin: 0;
+    font-size: 1.35rem;
+  }
+  body section .carte_restaurant .menu_restaurant {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
     margin-bottom: 10%;
-    cursor: pointer;
-    transition: all 400ms;
   }
-  body .carte_restaurant .bouton:hover {
-    background: linear-gradient(rgba(255, 121, 218, 0.9), rgba(147, 86, 220, 0.9));
-    box-shadow: 2px 5px 5px #525151;
+  body section .carte_restaurant .menu_restaurant .groupe_entree, body section .carte_restaurant .menu_restaurant .groupe_plats, body section .carte_restaurant .menu_restaurant .groupe_dessert {
+    width: 90%;
+    height: 250px;
+    margin-left: 5%;
+    margin-bottom: 8%;
+    background-color: #F6F6F6;
   }
-  body .carte_restaurant .bouton .commander {
-    color: white;
+  body section .carte_restaurant .menu_restaurant .groupe_entree h2, body section .carte_restaurant .menu_restaurant .groupe_plats h2, body section .carte_restaurant .menu_restaurant .groupe_dessert h2 {
+    font-size: 0.9rem;
+  }
+  body section .carte_restaurant .menu_restaurant .groupe_entree .plat, body section .carte_restaurant .menu_restaurant .groupe_plats .plat, body section .carte_restaurant .menu_restaurant .groupe_dessert .plat {
+    height: 62px;
+    padding-left: 3%;
+    font-size: 0.8rem;
+  }
+  body section .carte_restaurant .menu_restaurant .groupe_entree .plat .nom_plat, body section .carte_restaurant .menu_restaurant .groupe_plats .plat .nom_plat, body section .carte_restaurant .menu_restaurant .groupe_dessert .plat .nom_plat {
+    width: 250px;
+  }
+  body section .carte_restaurant .menu_restaurant .groupe_entree .plat .nom_plat .titre_plat, body section .carte_restaurant .menu_restaurant .groupe_plats .plat .nom_plat .titre_plat, body section .carte_restaurant .menu_restaurant .groupe_dessert .plat .nom_plat .titre_plat {
+    font-size: 1rem;
+  }
+  body section .carte_restaurant .menu_restaurant .groupe_entree .plat .prix, body section .carte_restaurant .menu_restaurant .groupe_plats .plat .prix, body section .carte_restaurant .menu_restaurant .groupe_dessert .plat .prix {
+    padding-top: 11.5%;
+  }
+  body section .carte_restaurant .menu_restaurant .groupe_entree .plat .choix, body section .carte_restaurant .menu_restaurant .groupe_plats .plat .choix, body section .carte_restaurant .menu_restaurant .groupe_dessert .plat .choix {
+    height: 62px;
+    font-size: 1rem;
+    line-height: 4;
+  }
+  body section .carte_restaurant .menu_restaurant .groupe_entree .plat:hover .choix, body section .carte_restaurant .menu_restaurant .groupe_plats .plat:hover .choix, body section .carte_restaurant .menu_restaurant .groupe_dessert .plat:hover .choix {
+    width: 22%;
+  }
+  body section .carte_restaurant .bouton {
+    width: 50%;
+    height: 46px;
+    border-radius: 10rem;
+    margin: auto;
+    line-height: 3.2;
+    font-size: 0.9rem;
   }
 }
 @media (max-width: 375px) {
@@ -827,7 +910,7 @@ body #pied_de_page .menu_pied_de_page .proposer_un_restaurant, body #pied_de_pag
     height: 10%;
     overflow: hidden;
   }
-  body .image_restaurant img {
+  body .image_palette img {
     width: 354.24px;
     height: 236.16px;
     margin: 0 0 0 -20px;
@@ -838,6 +921,7 @@ body #pied_de_page .menu_pied_de_page .proposer_un_restaurant, body #pied_de_pag
     justify-content: center;
     height: 800px;
     background-color: #F6F6F6;
+    padding-bottom: 10%;
   }
   body .carte_restaurant .nom_restaurant {
     width: 100%;
@@ -864,8 +948,8 @@ body #pied_de_page .menu_pied_de_page .proposer_un_restaurant, body #pied_de_pag
   }
   body .carte_restaurant .menu_restaurant .groupe_entree, body .carte_restaurant .menu_restaurant .groupe_plats, body .carte_restaurant .menu_restaurant .groupe_dessert {
     width: 25%;
-    height: 250px;
-    margin-bottom: 8%;
+    height: 340px;
+    margin-bottom: 5%;
     background-color: #F6F6F6;
   }
   body .carte_restaurant .menu_restaurant .groupe_entree {
@@ -914,6 +998,7 @@ body #pied_de_page .menu_pied_de_page .proposer_un_restaurant, body #pied_de_pag
   }
   body .carte_restaurant .menu_restaurant .groupe_entree .plat, body .carte_restaurant .menu_restaurant .groupe_plats .plat, body .carte_restaurant .menu_restaurant .groupe_dessert .plat {
     display: flex;
+    width: 95%;
     justify-content: space-between;
     height: 75px;
     padding-left: 3%;
@@ -964,7 +1049,7 @@ body #pied_de_page .menu_pied_de_page .proposer_un_restaurant, body #pied_de_pag
   body .carte_restaurant .menu_restaurant .groupe_entree .plat:hover .fas, body .carte_restaurant .menu_restaurant .groupe_plats .plat:hover .fas, body .carte_restaurant .menu_restaurant .groupe_dessert .plat:hover .fas {
     visibility: visible;
     transform: rotate(360deg);
-    transition: transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: transform 400ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
   body .carte_restaurant .bouton {
     width: 25%;
@@ -975,9 +1060,6 @@ body #pied_de_page .menu_pied_de_page .proposer_un_restaurant, body #pied_de_pag
     text-align: center;
     line-height: 2.5;
     font-size: 2rem;
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-bottom: 5%;
     cursor: pointer;
     transition: all 400ms;
   }
@@ -989,167 +1071,201 @@ body #pied_de_page .menu_pied_de_page .proposer_un_restaurant, body #pied_de_pag
     color: white;
   }
 }
-@media (max-width: 320px) and (max-width: 375px) {
+@media (max-width: 320px) and (min-width: 376px) and (max-width: 1025px) {
   body {
     /* Bloc Menu */
   }
   body .carte_restaurant {
+    height: 530px;
+  }
+  body .carte_restaurant .menu_restaurant {
+    height: 240px;
+  }
+  body .carte_restaurant .menu_restaurant .groupe_entree, body .carte_restaurant .menu_restaurant .groupe_plats, body .carte_restaurant .menu_restaurant .groupe_dessert {
+    width: 28%;
+    height: 290px;
+    margin-bottom: 5%;
+    background-color: #f6f6f6;
+  }
+  body .carte_restaurant .menu_restaurant .groupe_entree h2, body .carte_restaurant .menu_restaurant .groupe_plats h2, body .carte_restaurant .menu_restaurant .groupe_dessert h2 {
+    font-size: 1rem;
+  }
+  body .carte_restaurant .menu_restaurant .groupe_entree .plat, body .carte_restaurant .menu_restaurant .groupe_plats .plat, body .carte_restaurant .menu_restaurant .groupe_dessert .plat {
+    height: 62px;
+    padding-left: 3%;
+    font-size: 0.8rem;
+  }
+  body .carte_restaurant .menu_restaurant .groupe_entree .plat .nom_plat, body .carte_restaurant .menu_restaurant .groupe_plats .plat .nom_plat, body .carte_restaurant .menu_restaurant .groupe_dessert .plat .nom_plat {
+    width: 250px;
+  }
+  body .carte_restaurant .menu_restaurant .groupe_entree .plat .nom_plat .titre_plat, body .carte_restaurant .menu_restaurant .groupe_plats .plat .nom_plat .titre_plat, body .carte_restaurant .menu_restaurant .groupe_dessert .plat .nom_plat .titre_plat {
+    font-size: 1rem;
+  }
+  body .carte_restaurant .menu_restaurant .groupe_entree .plat .prix, body .carte_restaurant .menu_restaurant .groupe_plats .plat .prix, body .carte_restaurant .menu_restaurant .groupe_dessert .plat .prix {
+    padding-top: 11.5%;
+  }
+  body .carte_restaurant .menu_restaurant .groupe_entree .plat .choix, body .carte_restaurant .menu_restaurant .groupe_plats .plat .choix, body .carte_restaurant .menu_restaurant .groupe_dessert .plat .choix {
+    height: 62px;
+    font-size: 0.8rem;
+    line-height: 4;
+    line-height: 5;
+  }
+  body .carte_restaurant .bouton {
+    width: 25%;
+    height: 60px;
+    border-radius: 10rem;
+    line-height: 2.5;
+    font-size: 1.5rem;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+}
+@media (max-width: 320px) and (max-width: 375px) {
+  body section .carte_restaurant {
+    display: block;
     position: relative;
     top: -62px;
-    height: 1000px;
+    height: 1100px;
+    background-color: #f6f6f6;
     border-top-left-radius: 35px;
     border-top-right-radius: 35px;
   }
-  body .carte_restaurant .nom_restaurant {
+  body section .carte_restaurant .nom_restaurant {
     display: flex;
     width: 100%;
     margin-bottom: 5%;
   }
-  body .carte_restaurant .nom_restaurant h1 {
+  body section .carte_restaurant .nom_restaurant h1 {
     font-size: 1.5rem;
     padding-top: 9%;
     padding-bottom: 5%;
     padding-left: 5%;
     margin: 0;
   }
-  body .carte_restaurant .nom_restaurant .far.fa-heart {
+  body section .carte_restaurant .nom_restaurant .far.fa-heart {
     padding-top: 10.5%;
     padding-right: 0;
     margin: 0;
     font-size: 1.35rem;
   }
-  body .carte_restaurant .menu_restaurant {
+  body section .carte_restaurant .menu_restaurant {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    /* Les plats apparaissent par groupe "Entrée"; "Plat" et "Dessert" */
+    margin-bottom: 10%;
   }
-  body .carte_restaurant .menu_restaurant .groupe_entree, body .carte_restaurant .menu_restaurant .groupe_plats, body .carte_restaurant .menu_restaurant .groupe_dessert {
+  body section .carte_restaurant .menu_restaurant .groupe_entree, body section .carte_restaurant .menu_restaurant .groupe_plats, body section .carte_restaurant .menu_restaurant .groupe_dessert {
     width: 90%;
     height: 250px;
     margin-left: 5%;
     margin-bottom: 8%;
     background-color: #F6F6F6;
   }
-  body .carte_restaurant .menu_restaurant .groupe_entree h2, body .carte_restaurant .menu_restaurant .groupe_plats h2, body .carte_restaurant .menu_restaurant .groupe_dessert h2 {
-    width: 13%;
-    padding-bottom: 1.5%;
-    margin-bottom: 4%;
-    border-bottom: solid 2px #99E2D0;
+  body section .carte_restaurant .menu_restaurant .groupe_entree h2, body section .carte_restaurant .menu_restaurant .groupe_plats h2, body section .carte_restaurant .menu_restaurant .groupe_dessert h2 {
     font-size: 0.9rem;
-    color: #9A9A9A;
   }
-  body .carte_restaurant .menu_restaurant .groupe_entree .plat, body .carte_restaurant .menu_restaurant .groupe_plats .plat, body .carte_restaurant .menu_restaurant .groupe_dessert .plat {
-    display: flex;
-    justify-content: space-between;
+  body section .carte_restaurant .menu_restaurant .groupe_entree .plat, body section .carte_restaurant .menu_restaurant .groupe_plats .plat, body section .carte_restaurant .menu_restaurant .groupe_dessert .plat {
     height: 62px;
     padding-left: 3%;
-    margin-bottom: 4%;
-    border-radius: 15px;
-    box-shadow: 5px 5px 15px 5px #E6E6E6;
-    background-color: white;
     font-size: 0.8rem;
-    line-height: 1.6;
   }
-  body .carte_restaurant .menu_restaurant .groupe_entree .plat .nom_plat, body .carte_restaurant .menu_restaurant .groupe_plats .plat .nom_plat, body .carte_restaurant .menu_restaurant .groupe_dessert .plat .nom_plat {
-    display: inline-block;
+  body section .carte_restaurant .menu_restaurant .groupe_entree .plat .nom_plat, body section .carte_restaurant .menu_restaurant .groupe_plats .plat .nom_plat, body section .carte_restaurant .menu_restaurant .groupe_dessert .plat .nom_plat {
     width: 250px;
-    padding-top: 2.5%;
-    position: relative;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
   }
-  body .carte_restaurant .menu_restaurant .groupe_entree .plat .nom_plat .titre_plat, body .carte_restaurant .menu_restaurant .groupe_plats .plat .nom_plat .titre_plat, body .carte_restaurant .menu_restaurant .groupe_dessert .plat .nom_plat .titre_plat {
+  body section .carte_restaurant .menu_restaurant .groupe_entree .plat .nom_plat .titre_plat, body section .carte_restaurant .menu_restaurant .groupe_plats .plat .nom_plat .titre_plat, body section .carte_restaurant .menu_restaurant .groupe_dessert .plat .nom_plat .titre_plat {
     font-size: 1rem;
-    font-weight: bold;
   }
-  body .carte_restaurant .menu_restaurant .groupe_entree .plat .prix, body .carte_restaurant .menu_restaurant .groupe_plats .plat .prix, body .carte_restaurant .menu_restaurant .groupe_dessert .plat .prix {
-    width: 19%;
-    height: 55px;
+  body section .carte_restaurant .menu_restaurant .groupe_entree .plat .prix, body section .carte_restaurant .menu_restaurant .groupe_plats .plat .prix, body section .carte_restaurant .menu_restaurant .groupe_dessert .plat .prix {
     padding-top: 11.5%;
-    text-align: center;
   }
-  body .carte_restaurant .menu_restaurant .groupe_entree .plat .choix, body .carte_restaurant .menu_restaurant .groupe_plats .plat .choix, body .carte_restaurant .menu_restaurant .groupe_dessert .plat .choix {
-    width: 0;
+  body section .carte_restaurant .menu_restaurant .groupe_entree .plat .choix, body section .carte_restaurant .menu_restaurant .groupe_plats .plat .choix, body section .carte_restaurant .menu_restaurant .groupe_dessert .plat .choix {
     height: 62px;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-    background-color: #99E2D0;
     font-size: 1rem;
-    color: white;
-    text-align: center;
     line-height: 4;
   }
-  body .carte_restaurant .menu_restaurant .groupe_entree .plat:hover .choix, body .carte_restaurant .menu_restaurant .groupe_plats .plat:hover .choix, body .carte_restaurant .menu_restaurant .groupe_dessert .plat:hover .choix {
+  body section .carte_restaurant .menu_restaurant .groupe_entree .plat:hover .choix, body section .carte_restaurant .menu_restaurant .groupe_plats .plat:hover .choix, body section .carte_restaurant .menu_restaurant .groupe_dessert .plat:hover .choix {
     width: 22%;
-    transition: width 1s cubic-bezier(0.1, 0.1, 0.1, 1);
   }
-  body .carte_restaurant .menu_restaurant .groupe_entree .plat .fas, body .carte_restaurant .menu_restaurant .groupe_plats .plat .fas, body .carte_restaurant .menu_restaurant .groupe_dessert .plat .fas {
-    visibility: hidden;
-  }
-  body .carte_restaurant .menu_restaurant .groupe_entree .plat:hover .fas, body .carte_restaurant .menu_restaurant .groupe_plats .plat:hover .fas, body .carte_restaurant .menu_restaurant .groupe_dessert .plat:hover .fas {
-    visibility: visible;
-    transform: rotate(360deg);
-    transition: transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  }
-  body .carte_restaurant .menu_restaurant .groupe_entree {
-    animation-delay: 10ms;
-    animation: fadein 1s;
-  }
-  @keyframes fadein {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  body .carte_restaurant .menu_restaurant .groupe_plats {
-    animation-delay: 200ms;
-    animation: fadein 3s;
-  }
-  @keyframes fadein {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  body .carte_restaurant .menu_restaurant .groupe_dessert {
-    animation-delay: 800ms;
-    animation: fadein 5s;
-  }
-  @keyframes fadein {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  body .carte_restaurant .bouton {
+  body section .carte_restaurant .bouton {
     width: 50%;
     height: 46px;
     border-radius: 10rem;
-    background: linear-gradient(#ff79da, #9356dc);
-    box-shadow: 2px 2px 2px rgba(82, 81, 81, 0.9);
-    text-align: center;
+    margin: auto;
     line-height: 3.2;
     font-size: 0.9rem;
-    margin: auto;
-    margin-top: 10%;
+  }
+}
+@media (max-width: 320px) and (max-width: 320px) {
+  body section .carte_restaurant {
+    height: 1050px;
+    background-color: #f6f6f6;
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+  }
+  body section .carte_restaurant .nom_restaurant {
+    display: flex;
+    width: 100%;
+    margin-bottom: 5%;
+  }
+  body section .carte_restaurant .nom_restaurant h1 {
+    font-size: 1.5rem;
+    padding-top: 9%;
+    padding-bottom: 5%;
+    padding-left: 5%;
+    margin: 0;
+  }
+  body section .carte_restaurant .nom_restaurant .far.fa-heart {
+    padding-top: 10.5%;
+    padding-right: 0;
+    margin: 0;
+    font-size: 1.35rem;
+  }
+  body section .carte_restaurant .menu_restaurant {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
     margin-bottom: 10%;
-    cursor: pointer;
-    transition: all 400ms;
   }
-  body .carte_restaurant .bouton:hover {
-    background: linear-gradient(rgba(255, 121, 218, 0.9), rgba(147, 86, 220, 0.9));
-    box-shadow: 2px 5px 5px #525151;
+  body section .carte_restaurant .menu_restaurant .groupe_entree, body section .carte_restaurant .menu_restaurant .groupe_plats, body section .carte_restaurant .menu_restaurant .groupe_dessert {
+    width: 90%;
+    height: 250px;
+    margin-left: 5%;
+    margin-bottom: 8%;
+    background-color: #F6F6F6;
   }
-  body .carte_restaurant .bouton .commander {
-    color: white;
+  body section .carte_restaurant .menu_restaurant .groupe_entree h2, body section .carte_restaurant .menu_restaurant .groupe_plats h2, body section .carte_restaurant .menu_restaurant .groupe_dessert h2 {
+    font-size: 0.9rem;
+  }
+  body section .carte_restaurant .menu_restaurant .groupe_entree .plat, body section .carte_restaurant .menu_restaurant .groupe_plats .plat, body section .carte_restaurant .menu_restaurant .groupe_dessert .plat {
+    height: 62px;
+    padding-left: 3%;
+    font-size: 0.8rem;
+  }
+  body section .carte_restaurant .menu_restaurant .groupe_entree .plat .nom_plat, body section .carte_restaurant .menu_restaurant .groupe_plats .plat .nom_plat, body section .carte_restaurant .menu_restaurant .groupe_dessert .plat .nom_plat {
+    width: 250px;
+  }
+  body section .carte_restaurant .menu_restaurant .groupe_entree .plat .nom_plat .titre_plat, body section .carte_restaurant .menu_restaurant .groupe_plats .plat .nom_plat .titre_plat, body section .carte_restaurant .menu_restaurant .groupe_dessert .plat .nom_plat .titre_plat {
+    font-size: 1rem;
+  }
+  body section .carte_restaurant .menu_restaurant .groupe_entree .plat .prix, body section .carte_restaurant .menu_restaurant .groupe_plats .plat .prix, body section .carte_restaurant .menu_restaurant .groupe_dessert .plat .prix {
+    padding-top: 11.5%;
+  }
+  body section .carte_restaurant .menu_restaurant .groupe_entree .plat .choix, body section .carte_restaurant .menu_restaurant .groupe_plats .plat .choix, body section .carte_restaurant .menu_restaurant .groupe_dessert .plat .choix {
+    height: 62px;
+    font-size: 1rem;
+    line-height: 4;
+  }
+  body section .carte_restaurant .menu_restaurant .groupe_entree .plat:hover .choix, body section .carte_restaurant .menu_restaurant .groupe_plats .plat:hover .choix, body section .carte_restaurant .menu_restaurant .groupe_dessert .plat:hover .choix {
+    width: 22%;
+  }
+  body section .carte_restaurant .bouton {
+    width: 50%;
+    height: 46px;
+    border-radius: 10rem;
+    margin: auto;
+    line-height: 3.2;
+    font-size: 0.9rem;
   }
 }
 @media (max-width: 320px) {

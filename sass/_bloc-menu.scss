@@ -6,6 +6,7 @@
     justify-content: center;
     height: 800px;    
     background-color: #F6F6F6;
+    padding-bottom: 10%;
     .nom_restaurant{
         width: 100%;
         display: flex;
@@ -30,8 +31,8 @@
         width: 100%;
         .groupe_entree, .groupe_plats, .groupe_dessert{
             width: 25%;
-            height: 250px;
-            margin-bottom: 8%;
+            height: 340px;
+            margin-bottom: 5%;
             background-color: #F6F6F6;
         }
 
@@ -48,8 +49,7 @@
                     opacity: 1;
                 }
             }
-        }
-        
+        }  
         .groupe_plats{
             animation-delay: 200ms;
             animation: fadein 3s;
@@ -87,6 +87,7 @@
             }
             .plat{
                 display: flex;
+                width: 95%;
                 justify-content: space-between;
                 height: 75px;
                 padding-left: 3%;
@@ -136,7 +137,7 @@
                 &:hover .fas{
                     visibility: visible;
                     transform: rotate(360deg);
-                    transition: transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                    transition: transform 400ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
                 }
             }
         }
@@ -155,9 +156,9 @@
         text-align: center;
         line-height: 2.5;
         font-size: 2rem;
-        margin-left: 5%;
-        margin-right: 5%;
-        margin-bottom: 5%;
+//        margin-left: 5%;
+//        margin-right: 5%;
+//        margin-bottom: 5%;
         cursor: pointer;
         transition: all 400ms;
         &:hover{
@@ -170,14 +171,70 @@
     }
 }
 
+@media (min-width: 376px) and (max-width: 1025px){
+
+    /* Bloc Menu */
+
+    .carte_restaurant{
+        height: 530px;
+        .menu_restaurant{
+            height: 240px;
+            .groupe_entree, .groupe_plats, .groupe_dessert{
+                width: 28%;
+                height: 290px;
+                margin-bottom: 5%;
+                background-color: #f6f6f6;   
+                h2{
+                    font-size: 1rem;
+                }
+                .plat{
+                    height: 62px;
+                    padding-left: 3%;
+                    font-size: 0.8rem;
+                    .nom_plat{
+                        width: 250px;
+                        .titre_plat{
+                            font-size: 1rem;
+                        }
+                    }
+                    .prix{
+                        padding-top: 11.5%;
+                    }
+                    .choix{
+                        height: 62px;
+                        font-size: .8rem;
+                        line-height: 4;
+                        line-height: 5;
+                    }
+                }
+            }
+        }
+        .bouton{
+            width: 25%;
+            height: 60px;
+            border-radius: 10rem;
+            line-height: 2.5;
+            font-size: 1.5rem;
+            margin: auto;
+            margin-top: 5%;
+            margin-bottom: 5%;
+            }
+    }
+}
+
+
 @media (max-width: 375px){
+
+section
 
         /* Bloc Menu */
 
     .carte_restaurant{
+        display: block;
         position: relative;
         top: -62px;
-        height: 1000px;
+        height: 1100px;    
+        background-color:#f6f6f6;
         border-top-left-radius: 35px;
         border-top-right-radius: 35px;
         .nom_restaurant{
@@ -202,6 +259,7 @@
             display: flex;
             flex-wrap: wrap;
             width: 100%;
+            margin-bottom: 10%;
             .groupe_entree, .groupe_plats, .groupe_dessert{
                 width: 90%;
                 height: 250px;
@@ -211,133 +269,119 @@
             }
             .groupe_entree, .groupe_plats, .groupe_dessert{   
                 h2{
-                    width: 13%;
-                    padding-bottom: 1.5%;
-                    margin-bottom: 4%;
-                    border-bottom: solid 2px #99E2D0;
                     font-size: 0.9rem;
-                    color: #9A9A9A;
                 }
                 .plat{
-                    display: flex;
-                    justify-content: space-between;
                     height: 62px;
                     padding-left: 3%;
-                    margin-bottom: 4%;
-                    border-radius: 15px;
-                    box-shadow: 5px 5px 15px 5px #E6E6E6;
-                    background-color: white;
                     font-size: 0.8rem;
-                    line-height: 1.6;
                     .nom_plat{
-                        display: inline-block;
                         width: 250px;
-                        padding-top: 2.5%;
-                        position: relative;
-                        overflow: hidden;
-                        white-space: nowrap;
-                        text-overflow: ellipsis;
                         .titre_plat{
                             font-size: 1rem;
-                            font-weight: bold;
                         }
                     }
                     .prix{
-                        width: 19%;
-                        height: 55px;
                         padding-top: 11.5%;
-                        text-align: center;
                     }
                     .choix{
-                        width: 0;
                         height: 62px;
-                        border-top-right-radius: 15px;
-                        border-bottom-right-radius: 15px;
-                        background-color: #99E2D0;
                         font-size: 1rem;
-                        color: white;
-                        text-align: center;
                         line-height: 4;
                     }
                     &:hover .choix{
                         width: 22%;
-                        transition: width 1s cubic-bezier(0.1, 0.1, 0.1, 1);
                     }
-                    .fas{
-                        visibility: hidden;
-                    }
-                    &:hover .fas{
-                        visibility: visible;
-                        transform: rotate(360deg);
-                        transition: transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-                    }
-
                 }    
             }
-            /* Les plats apparaissent par groupe "Entrée"; "Plat" et "Dessert" */
-            .groupe_entree{
-                animation-delay: 10ms;
-                animation: fadein 1s;
-                @keyframes fadein{
-                    from{
-                        opacity: 0;
-                }
-                    to{
-                        opacity: 1;
-                    }
-                }
-            }
-            .groupe_plats{
-                animation-delay: 200ms;
-                animation: fadein 3s;
-                @keyframes fadein{
-                    from{
-                        opacity: 0;
-                }
-                    to{
-                        opacity: 1;
-                    }
-                }
-            }
-            .groupe_dessert{
-                animation-delay: 800ms;
-                animation: fadein 5s;
-                @keyframes fadein{
-                    from{
-                        opacity: 0;
-                }
-                    to{
-                        opacity: 1;
-                    }
-                }
-            }
         }
-        $cd-btn-start: linear-gradient(rgba(255, 121, 218, 1),rgba(147, 86, 220, 1));
-        $cd-btn-end: linear-gradient(rgba(255, 121, 218, 0.9),rgba(147, 86, 220, 0.9));
-        $cd-bdr-start: 2px 2px 2px rgb(82, 81, 81, 0.9);
-        $cd-bdr-end: 2px 5px 5px rgb(82, 81, 81, 1);
-        $cd-txt: white;
         .bouton{
             width: 50%;
             height: 46px;
             border-radius: 10rem;
-            background: $cd-btn-start;
-            box-shadow: $cd-bdr-start;
-            text-align: center;
+            margin: auto;
             line-height: 3.2;
             font-size: 0.9rem;
-            margin: auto;
-            margin-top: 10%;
-            margin-bottom: 10%;
-            cursor: pointer;
-            transition: all 400ms;
-            &:hover{
-                background: $cd-btn-end;
-                box-shadow: $cd-bdr-end;
-            }
-            .commander{
-                color:$cd-txt;
-            }
         }
     }
 }
+
+@media (max-width: 320px){
+
+    section
+    
+            /* Bloc Menu */
+    
+        .carte_restaurant{
+            height: 1050px;    
+            background-color: #f6f6f6;
+            border-top-left-radius: 35px;
+            border-top-right-radius: 35px;
+            .nom_restaurant{
+                display:flex;
+                width: 100%;
+                margin-bottom: 5%;
+                h1{
+                    font-size: 1.5rem;
+                    padding-top: 9%;
+                    padding-bottom: 5%;
+                    padding-left: 5%;
+                    margin: 0;
+                }
+                .far.fa-heart{
+                    padding-top: 10.5%;
+                    padding-right: 0;
+                    margin: 0;
+                    font-size: 1.35rem;
+                }
+            }
+            .menu_restaurant{
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+                margin-bottom: 10%;
+                .groupe_entree, .groupe_plats, .groupe_dessert{
+                    width: 90%;
+                    height: 250px;
+                    margin-left: 5%;
+                    margin-bottom: 8%;
+                    background-color: #F6F6F6;
+                }
+                .groupe_entree, .groupe_plats, .groupe_dessert{   
+                    h2{
+                        font-size: 0.9rem;
+                    }
+                    .plat{
+                        height: 62px;
+                        padding-left: 3%;
+                        font-size: 0.8rem;
+                        .nom_plat{
+                            width: 250px;
+                            .titre_plat{
+                                font-size: 1rem;
+                            }
+                        }
+                        .prix{
+                            padding-top: 11.5%;
+                        }
+                        .choix{
+                            height: 62px;
+                            font-size: 1rem;
+                            line-height: 4;
+                        }
+                        &:hover .choix{
+                            width: 22%;
+                        }
+                    }    
+                }
+            }
+            .bouton{
+                width: 50%;
+                height: 46px;
+                border-radius: 10rem;
+                margin: auto;
+                line-height: 3.2;
+                font-size: 0.9rem;
+            }
+        }
+    }

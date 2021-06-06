@@ -83,6 +83,13 @@ body #titre_principal .logo img {
   body {
     /* Logo */
   }
+  body #titre_principal_accueil .logo {
+    text-align: center;
+  }
+  body #titre_principal_accueil .logo img {
+    width: 148.96px;
+    height: 25.84px;
+  }
   body #titre_principal {
     flex-wrap: wrap;
     justify-content: left;
@@ -94,7 +101,6 @@ body #titre_principal .logo img {
     font-size: 1rem;
   }
   body #titre_principal .logo {
-    text-align: center;
     padding-top: 2%;
     margin-bottom: 1%;
   }
@@ -383,11 +389,14 @@ body #pied_de_page .menu_pied_de_page .fas.fa-utensils, body #pied_de_page .menu
 body #pied_de_page .menu_pied_de_page .proposer_un_restaurant, body #pied_de_page .menu_pied_de_page .devenir_partenaire, body #pied_de_page .menu_pied_de_page .mentions_legales, body #pied_de_page .menu_pied_de_page .contact {
   color: white;
 }
-@media (max-width: 376px) {
+@media (max-width: 375px) {
   body {
     /* Footer */
   }
   body #pied_de_page {
+    position: absolute;
+    top: 1348px;
+    width: 100%;
     height: 178px;
     padding-top: 6%;
   }
@@ -409,6 +418,14 @@ body #pied_de_page .menu_pied_de_page .proposer_un_restaurant, body #pied_de_pag
   }
   body #pied_de_page .menu_pied_de_page .fas.fa-utensils, body #pied_de_page .menu_pied_de_page .fas.fa-hands-helping {
     margin-right: 1.5%;
+  }
+}
+@media (max-width: 320px) {
+  body {
+    /* Footer */
+  }
+  body #pied_de_page {
+    top: 1294px;
   }
 }
 
@@ -468,43 +485,10 @@ body #pied_de_page .menu_pied_de_page .proposer_un_restaurant, body #pied_de_pag
 }
 @media (max-width: 376px) {
   body {
-    /* Header */
-    /* Loading spinner */
     /* Section */
     /* Fontionnement */
     /* Fontionnement */
     /* Restaurants */
-  }
-  body .loading {
-    display: flex;
-    justify-content: center;
-    position: fixed;
-    z-index: 9999;
-  }
-  body .loading--full-height {
-    width: 100%;
-    height: 100%;
-    background: rgba(121, 255, 255, 0.5);
-    align-items: center;
-  }
-  body .loading::after {
-    content: "";
-    width: 50px;
-    height: 50px;
-    border: 10px solid #FF79DA;
-    border-top-color: #9356DC;
-    border-bottom-color: #9356DC;
-    border-radius: 50%;
-    animation: loading 1s linear infinite;
-  }
-  @keyframes loading {
-    from {
-      transform: rotate(1turn);
-    }
-  }
-  body .loading {
-    visibility: hidden;
-    transition: visibility 1s 3s linear;
   }
   body #localisation {
     font-size: 0.9rem;
@@ -624,6 +608,37 @@ body #pied_de_page .menu_pied_de_page .proposer_un_restaurant, body #pied_de_pag
   }
   body #restaurants #les_restaurants .le_restaurant {
     width: 90%;
+  }
+  body #restaurants #les_restaurants .le_restaurant .image_restaurant1 img {
+    width: 354.24px;
+    height: 236.16px;
+    margin: -50px 0 0 0;
+  }
+  body #restaurants #les_restaurants .le_restaurant .image_restaurant1 p {
+    left: 255px;
+  }
+  body #restaurants #les_restaurants .le_restaurant .image_restaurant2 img {
+    width: 362.88px;
+    height: 453.6px;
+    margin: -145px 0 0 -20px;
+  }
+  body #restaurants #les_restaurants .le_restaurant .image_restaurant2 p {
+    left: 255px;
+  }
+  body #restaurants #les_restaurants .le_restaurant .image_restaurant3 img {
+    width: 352.16px;
+    height: 234.8px;
+    margin: -75px 0 0 0px;
+  }
+  body #restaurants #les_restaurants .le_restaurant .image_restaurant4 img {
+    width: 353.01px;
+    height: 241.92px;
+    margin: -55px 0 0 -5px;
+  }
+}
+@media (max-width: 320px) {
+  body {
+    /* Restaurants */
   }
   body #restaurants #les_restaurants .le_restaurant .image_restaurant1 img {
     width: 303.072px;

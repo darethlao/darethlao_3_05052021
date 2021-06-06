@@ -25,6 +25,19 @@
 
     /* Logo */
 
+    #titre_principal_accueil{
+        $largeurlogo: 392px;
+        $hauteurlogo: 68px;
+        .logo{
+            img{
+                width: $largeurlogo * 0.38;
+                height: $hauteurlogo * 0.38;
+            }
+            text-align: center;
+
+        }
+    }
+
     #titre_principal{
         flex-wrap: wrap;
         justify-content: left;
@@ -41,7 +54,6 @@
                 width: $largeurlogo * 0.38;
                 height: $hauteurlogo * 0.38;
             }
-            text-align: center;
             padding-top: 2%;
             margin-bottom: 1%;
         }
