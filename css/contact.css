@@ -299,6 +299,74 @@ section h1 {
     top: 1390px;
   }
 }
+/* Pied de page pour page contact */
+#pied_de_page_contact {
+  height: 100%;
+  padding-bottom: 2%;
+  background-color: #353535;
+  color: white;
+}
+#pied_de_page_contact .logo_contact {
+  font-family: "Shrikhand";
+  font-size: 1.5rem;
+  text-align: left;
+  margin-left: 3%;
+  padding-top: 1%;
+  margin-bottom: 1%;
+}
+#pied_de_page_contact .menu_pied_de_page_contact {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-left: 3%;
+}
+#pied_de_page_contact .menu_pied_de_page_contact .fas.fa-utensils {
+  font-size: 1rem;
+}
+#pied_de_page_contact .menu_pied_de_page_contact .fas.fa-hands-helping {
+  font-size: 0.6rem;
+}
+#pied_de_page_contact .menu_pied_de_page_contact .fas.fa-utensils, #pied_de_page_contact .menu_pied_de_page_contact .fas.fa-hands-helping {
+  margin-right: 1%;
+}
+#pied_de_page_contact .menu_pied_de_page_contact .proposer_un_restaurant, #pied_de_page_contact .menu_pied_de_page_contact .devenir_partenaire, #pied_de_page_contact .menu_pied_de_page_contact .mentions_legales, #pied_de_page_contact .menu_pied_de_page_contact .contact {
+  color: white;
+}
+
+@media (max-width: 375px) {
+  /* Footer */
+  #pied_de_page_contact {
+    position: absolute;
+    top: 400px;
+    width: 100%;
+    height: 178px;
+    padding-top: 6%;
+  }
+  #pied_de_page_contact .logo_accueil {
+    font-size: 0.95rem;
+    margin-left: 5%;
+    margin-bottom: 5%;
+  }
+  #pied_de_page_contact .menu_pied_de_page_contact {
+    font-size: 0.8rem;
+    line-height: 1.7;
+    margin-left: 5%;
+  }
+  #pied_de_page_contact .menu_pied_de_page_contact .fas.fa-utensils {
+    font-size: 0.7rem;
+  }
+  #pied_de_page_contact .menu_pied_de_page_contact .fas.fa-hands-helping {
+    font-size: 0.5rem;
+  }
+  #pied_de_page_contact .menu_pied_de_page_contact .fas.fa-utensils, #pied_de_page_contact .menu_pied_de_page_contact .fas.fa-hands-helping {
+    margin-right: 1.5%;
+  }
+}
+@media (max-width: 320px) {
+  /* Footer */
+  #pied_de_page_contact {
+    top: 390px;
+  }
+}
 @media (min-width: 320px) and (max-width: 375px) {
   /* Header */
   /* Logo */
@@ -324,16 +392,57 @@ section h1 {
   }
 
   /* Footer */
+  /* Footer */
   #pied_de_page {
-    height: 178px;
-    padding-top: 6%;
+    height: 100%;
+    padding-bottom: 2%;
     background-color: #353535;
     color: white;
   }
   #pied_de_page .logo {
     font-family: "Shrikhand";
-    font-size: 0.95rem;
+    font-size: 1.5rem;
     text-align: left;
+    margin-left: 3%;
+    padding-top: 1%;
+    margin-bottom: 1%;
+  }
+  #pied_de_page .menu_pied_de_page {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-left: 3%;
+  }
+  #pied_de_page .menu_pied_de_page .fas.fa-utensils {
+    font-size: 1rem;
+  }
+  #pied_de_page .menu_pied_de_page .fas.fa-hands-helping {
+    font-size: 0.6rem;
+  }
+  #pied_de_page .menu_pied_de_page .fas.fa-utensils, #pied_de_page .menu_pied_de_page .fas.fa-hands-helping {
+    margin-right: 1%;
+  }
+  #pied_de_page .menu_pied_de_page .proposer_un_restaurant, #pied_de_page .menu_pied_de_page .devenir_partenaire, #pied_de_page .menu_pied_de_page .mentions_legales, #pied_de_page .menu_pied_de_page .contact {
+    color: white;
+  }
+
+  /* Pied de page pour page accueil */
+
+  /* Pied de page pour page 4 "La note E=enchantée" */
+  /* Footer */
+
+  /* Pied de page pour page contact */
+}
+@media (min-width: 320px) and (max-width: 375px) and (max-width: 375px) {
+  /* Footer */
+  #pied_de_page {
+    position: absolute;
+    top: 1348px;
+    width: 100%;
+    height: 178px;
+    padding-top: 6%;
+  }
+  #pied_de_page .logo {
+    font-size: 0.95rem;
     margin-left: 5%;
     margin-bottom: 5%;
   }
@@ -351,8 +460,215 @@ section h1 {
   #pied_de_page .menu_pied_de_page .fas.fa-utensils, #pied_de_page .menu_pied_de_page .fas.fa-hands-helping {
     margin-right: 1.5%;
   }
-  #pied_de_page .menu_pied_de_page .proposer_un_restaurant, #pied_de_page .menu_pied_de_page .devenir_partenaire, #pied_de_page .menu_pied_de_page .mentions_legales, #pied_de_page .menu_pied_de_page .contact {
+}
+@media (min-width: 320px) and (max-width: 375px) and (max-width: 320px) {
+  /* Footer */
+  #pied_de_page {
+    top: 1294px;
+  }
+}
+@media (min-width: 320px) and (max-width: 375px) {
+  #pied_de_page_accueil {
+    height: 100%;
+    padding-bottom: 2%;
+    background-color: #353535;
     color: white;
+  }
+  #pied_de_page_accueil .logo_accueil {
+    font-family: "Shrikhand";
+    font-size: 1.5rem;
+    text-align: left;
+    margin-left: 3%;
+    padding-top: 1%;
+    margin-bottom: 1%;
+  }
+  #pied_de_page_accueil .menu_pied_de_page_accueil {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-left: 3%;
+  }
+  #pied_de_page_accueil .menu_pied_de_page_accueil .fas.fa-utensils {
+    font-size: 1rem;
+  }
+  #pied_de_page_accueil .menu_pied_de_page_accueil .fas.fa-hands-helping {
+    font-size: 0.6rem;
+  }
+  #pied_de_page_accueil .menu_pied_de_page_accueil .fas.fa-utensils, #pied_de_page_accueil .menu_pied_de_page_accueil .fas.fa-hands-helping {
+    margin-right: 1%;
+  }
+  #pied_de_page_accueil .menu_pied_de_page_accueil .proposer_un_restaurant, #pied_de_page_accueil .menu_pied_de_page_accueil .devenir_partenaire, #pied_de_page_accueil .menu_pied_de_page_accueil .mentions_legales, #pied_de_page_accueil .menu_pied_de_page_accueil .contact {
+    color: white;
+  }
+}
+@media (min-width: 320px) and (max-width: 375px) and (max-width: 375px) {
+  /* Footer */
+  #pied_de_page_accueil {
+    position: absolute;
+    top: 1900px;
+    width: 100%;
+    height: 178px;
+    padding-top: 6%;
+  }
+  #pied_de_page_accueil .logo_accueil {
+    font-size: 0.95rem;
+    margin-left: 5%;
+    margin-bottom: 5%;
+  }
+  #pied_de_page_accueil .menu_pied_de_page_accueil {
+    font-size: 0.8rem;
+    line-height: 1.7;
+    margin-left: 5%;
+  }
+  #pied_de_page_accueil .menu_pied_de_page_accueil .fas.fa-utensils {
+    font-size: 0.7rem;
+  }
+  #pied_de_page_accueil .menu_pied_de_page_accueil .fas.fa-hands-helping {
+    font-size: 0.5rem;
+  }
+  #pied_de_page_accueil .menu_pied_de_page_accueil .fas.fa-utensils, #pied_de_page_accueil .menu_pied_de_page_accueil .fas.fa-hands-helping {
+    margin-right: 1.5%;
+  }
+}
+@media (min-width: 320px) and (max-width: 375px) and (max-width: 320px) {
+  /* Footer */
+  #pied_de_page_accueil {
+    top: 1850px;
+  }
+}
+@media (min-width: 320px) and (max-width: 375px) {
+  #pied_de_page_note {
+    height: 100%;
+    padding-bottom: 2%;
+    background-color: #353535;
+    color: white;
+  }
+  #pied_de_page_note .logo_note {
+    font-family: "Shrikhand";
+    font-size: 1.5rem;
+    text-align: left;
+    margin-left: 3%;
+    padding-top: 1%;
+    margin-bottom: 1%;
+  }
+  #pied_de_page_note .menu_pied_de_page_note {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-left: 3%;
+  }
+  #pied_de_page_note .menu_pied_de_page_note .fas.fa-utensils {
+    font-size: 1rem;
+  }
+  #pied_de_page_note .menu_pied_de_page_note .fas.fa-hands-helping {
+    font-size: 0.6rem;
+  }
+  #pied_de_page_note .menu_pied_de_page_note .fas.fa-utensils, #pied_de_page_note .menu_pied_de_page_note .fas.fa-hands-helping {
+    margin-right: 1%;
+  }
+  #pied_de_page_note .menu_pied_de_page_note .proposer_un_restaurant, #pied_de_page_note .menu_pied_de_page_note .devenir_partenaire, #pied_de_page_note .menu_pied_de_page_note .mentions_legales, #pied_de_page_note .menu_pied_de_page_note .contact {
+    color: white;
+  }
+}
+@media (min-width: 320px) and (max-width: 375px) and (max-width: 375px) {
+  /* Footer */
+  #pied_de_page_note {
+    position: absolute;
+    top: 1400px;
+    width: 100%;
+    height: 178px;
+    padding-top: 6%;
+  }
+  #pied_de_page_note .logo_note {
+    font-size: 0.95rem;
+    margin-left: 5%;
+    margin-bottom: 5%;
+  }
+  #pied_de_page_note .menu_pied_de_page_note {
+    font-size: 0.8rem;
+    line-height: 1.7;
+    margin-left: 5%;
+  }
+  #pied_de_page_note .menu_pied_de_page_note .fas.fa-utensils {
+    font-size: 0.7rem;
+  }
+  #pied_de_page_note .menu_pied_de_page_note .fas.fa-hands-helping {
+    font-size: 0.5rem;
+  }
+  #pied_de_page_note .menu_pied_de_page_note .fas.fa-utensils, #pied_de_page_note .menu_pied_de_page_note .fas.fa-hands-helping {
+    margin-right: 1.5%;
+  }
+}
+@media (min-width: 320px) and (max-width: 375px) and (max-width: 320px) {
+  /* Footer */
+  #pied_de_page_note {
+    top: 1390px;
+  }
+}
+@media (min-width: 320px) and (max-width: 375px) {
+  #pied_de_page_contact {
+    height: 100%;
+    padding-bottom: 2%;
+    background-color: #353535;
+    color: white;
+  }
+  #pied_de_page_contact .logo_contact {
+    font-family: "Shrikhand";
+    font-size: 1.5rem;
+    text-align: left;
+    margin-left: 3%;
+    padding-top: 1%;
+    margin-bottom: 1%;
+  }
+  #pied_de_page_contact .menu_pied_de_page_contact {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-left: 3%;
+  }
+  #pied_de_page_contact .menu_pied_de_page_contact .fas.fa-utensils {
+    font-size: 1rem;
+  }
+  #pied_de_page_contact .menu_pied_de_page_contact .fas.fa-hands-helping {
+    font-size: 0.6rem;
+  }
+  #pied_de_page_contact .menu_pied_de_page_contact .fas.fa-utensils, #pied_de_page_contact .menu_pied_de_page_contact .fas.fa-hands-helping {
+    margin-right: 1%;
+  }
+  #pied_de_page_contact .menu_pied_de_page_contact .proposer_un_restaurant, #pied_de_page_contact .menu_pied_de_page_contact .devenir_partenaire, #pied_de_page_contact .menu_pied_de_page_contact .mentions_legales, #pied_de_page_contact .menu_pied_de_page_contact .contact {
+    color: white;
+  }
+}
+@media (min-width: 320px) and (max-width: 375px) and (max-width: 375px) {
+  /* Footer */
+  #pied_de_page_contact {
+    position: absolute;
+    top: 400px;
+    width: 100%;
+    height: 178px;
+    padding-top: 6%;
+  }
+  #pied_de_page_contact .logo_accueil {
+    font-size: 0.95rem;
+    margin-left: 5%;
+    margin-bottom: 5%;
+  }
+  #pied_de_page_contact .menu_pied_de_page_contact {
+    font-size: 0.8rem;
+    line-height: 1.7;
+    margin-left: 5%;
+  }
+  #pied_de_page_contact .menu_pied_de_page_contact .fas.fa-utensils {
+    font-size: 0.7rem;
+  }
+  #pied_de_page_contact .menu_pied_de_page_contact .fas.fa-hands-helping {
+    font-size: 0.5rem;
+  }
+  #pied_de_page_contact .menu_pied_de_page_contact .fas.fa-utensils, #pied_de_page_contact .menu_pied_de_page_contact .fas.fa-hands-helping {
+    margin-right: 1.5%;
+  }
+}
+@media (min-width: 320px) and (max-width: 375px) and (max-width: 320px) {
+  /* Footer */
+  #pied_de_page_contact {
+    top: 390px;
   }
 }
 

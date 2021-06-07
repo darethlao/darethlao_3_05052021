@@ -224,3 +224,78 @@
         top: 1390px;
     }
 }
+
+/* Pied de page pour page contact */
+
+#pied_de_page_contact{
+    height: 100%;
+    padding-bottom: 2%;
+    background-color: #353535;
+    color: white;
+    .logo_contact{
+        font-family:  'Shrikhand';
+        font-size: 1.5rem;
+        text-align: left;
+        margin-left: 3%;
+        padding-top: 1%;
+        margin-bottom: 1%;
+    }
+    .menu_pied_de_page_contact{
+        font-size: 1rem;
+        line-height: 1.7;
+        margin-left: 3%;
+        .fas.fa-utensils{
+            font-size: 1rem;
+        }
+        .fas.fa-hands-helping{
+            font-size: 0.6rem;
+        }
+        .fas.fa-utensils, .fas.fa-hands-helping{
+            margin-right: 1%;
+        }
+        .proposer_un_restaurant, .devenir_partenaire, .mentions_legales, .contact{
+            color: white;
+        }
+    }
+}
+
+@media (max-width: 375px){
+
+    /* Footer */
+
+    #pied_de_page_contact{
+        position: absolute;
+        top: 400px;
+        width: 100%;
+        height: 178px;
+        padding-top: 6%;
+        .logo_accueil{
+            font-size: 0.95rem;
+            margin-left: 5%;
+            margin-bottom: 5%;
+        }
+        .menu_pied_de_page_contact{
+            font-size: 0.8rem;
+            line-height: 1.7;
+            margin-left: 5%;
+            .fas.fa-utensils{
+                font-size: 0.7rem;
+            }
+            .fas.fa-hands-helping{
+                font-size: 0.5rem;
+            }
+            .fas.fa-utensils, .fas.fa-hands-helping{
+                margin-right:  1.5%;
+            }
+        }
+    }
+}
+
+@media (max-width: 320px){
+
+    /* Footer */
+
+    #pied_de_page_contact{
+        top: 390px;
+    }
+}
