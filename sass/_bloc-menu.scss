@@ -156,9 +156,6 @@
         text-align: center;
         line-height: 2.5;
         font-size: 2rem;
-//        margin-left: 5%;
-//        margin-right: 5%;
-//        margin-bottom: 5%;
         cursor: pointer;
         transition: all 400ms;
         &:hover{
@@ -221,7 +218,6 @@
             }
     }
 }
-
 
 @media (max-width: 375px){
 
@@ -308,10 +304,10 @@ section
 
 @media (max-width: 320px){
 
-    section
+    section{
     
-            /* Bloc Menu */
-    
+        /* Bloc Menu */
+
         .carte_restaurant{
             height: 1050px;    
             background-color: #f6f6f6;
@@ -382,6 +378,573 @@ section
                 margin: auto;
                 line-height: 3.2;
                 font-size: 0.9rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 375px){
+
+section
+
+        /* Bloc Menu */
+
+    .carte_restaurant{
+        display: block;
+        position: relative;
+        top: -62px;
+        height: 1100px;    
+        background-color:#f6f6f6;
+        border-top-left-radius: 35px;
+        border-top-right-radius: 35px;
+        .nom_restaurant{
+            display:flex;
+            width: 100%;
+            margin-bottom: 5%;
+            h1{
+                font-size: 1.5rem;
+                padding-top: 9%;
+                padding-bottom: 5%;
+                padding-left: 5%;
+                margin: 0;
+            }
+            .far.fa-heart{
+                padding-top: 10.5%;
+                padding-right: 0;
+                margin: 0;
+                font-size: 1.35rem;
+            }
+        }
+        .menu_restaurant{
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            margin-bottom: 10%;
+            .groupe_entree, .groupe_plats, .groupe_dessert{
+                width: 90%;
+                height: 250px;
+                margin-left: 5%;
+                margin-bottom: 8%;
+                background-color: #F6F6F6;
+            }
+            .groupe_entree, .groupe_plats, .groupe_dessert{   
+                h2{
+                    font-size: 0.9rem;
+                }
+                .plat{
+                    height: 62px;
+                    padding-left: 3%;
+                    font-size: 0.8rem;
+                    .nom_plat{
+                        width: 250px;
+                        .titre_plat{
+                            font-size: 1rem;
+                        }
+                    }
+                    .prix{
+                        padding-top: 11.5%;
+                    }
+                    .choix{
+                        height: 62px;
+                        font-size: 1rem;
+                        line-height: 4;
+                    }
+                    &:hover .choix{
+                        width: 22%;
+                    }
+                }    
+            }
+        }
+        .bouton{
+            width: 50%;
+            height: 46px;
+            border-radius: 10rem;
+            margin: auto;
+            line-height: 3.2;
+            font-size: 0.9rem;
+        }
+    }
+}
+
+@media (max-width: 320px){
+
+    section{
+    
+        /* Bloc Menu */
+
+        .carte_restaurant{
+            height: 1050px;    
+            background-color: #f6f6f6;
+            border-top-left-radius: 35px;
+            border-top-right-radius: 35px;
+            .nom_restaurant{
+                display:flex;
+                width: 100%;
+                margin-bottom: 5%;
+                h1{
+                    font-size: 1.5rem;
+                    padding-top: 9%;
+                    padding-bottom: 5%;
+                    padding-left: 5%;
+                    margin: 0;
+                }
+                .far.fa-heart{
+                    padding-top: 10.5%;
+                    padding-right: 0;
+                    margin: 0;
+                    font-size: 1.35rem;
+                }
+            }
+            .menu_restaurant{
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+                margin-bottom: 10%;
+                .groupe_entree, .groupe_plats, .groupe_dessert{
+                    width: 90%;
+                    height: 250px;
+                    margin-left: 5%;
+                    margin-bottom: 8%;
+                    background-color: #F6F6F6;
+                }
+                .groupe_entree, .groupe_plats, .groupe_dessert{   
+                    h2{
+                        font-size: 0.9rem;
+                    }
+                    .plat{
+                        height: 62px;
+                        padding-left: 3%;
+                        font-size: 0.8rem;
+                        .nom_plat{
+                            width: 250px;
+                            .titre_plat{
+                                font-size: 1rem;
+                            }
+                        }
+                        .prix{
+                            padding-top: 11.5%;
+                        }
+                        .choix{
+                            height: 62px;
+                            font-size: 1rem;
+                            line-height: 4;
+                        }
+                        &:hover .choix{
+                            width: 22%;
+                        }
+                    }    
+                }
+            }
+            .bouton{
+                width: 50%;
+                height: 46px;
+                border-radius: 10rem;
+                margin: auto;
+                line-height: 3.2;
+                font-size: 0.9rem;
+            }
+        }
+    }
+}
+
+/* Bloc Menu pour page 4 restaurant "La note enchantée" */
+
+.carte_restaurant_note{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 800px;    
+    background-color: #F6F6F6;
+    padding-bottom: 10%;
+    .nom_restaurant_note{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        h1{
+            font-family: 'Shrikhand';
+            font-size: 2.5rem;
+            padding-top: 2%;
+            padding-bottom: 2.8%;
+            padding-right: 10%;
+        }
+        .far.fa-heart{
+            padding-top: 2%;
+            font-size: 3rem;
+        }
+    }
+
+    .menu_restaurant_note{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 100%;
+        .groupe_entree_note, .groupe_plats_note, .groupe_dessert_note{
+            width: 25%;
+            height: 340px;
+            margin-bottom: 5%;
+            background-color: #F6F6F6;
+        }
+
+        /* Les plats apparaissent par groupe "Entrée"; "Plat" et "Dessert" */
+
+        .groupe_entree_note{
+            animation-delay: 10ms;
+            animation: fadein 1s;
+            @keyframes fadein{
+                from{
+                    opacity: 0;
+               }
+                to{
+                    opacity: 1;
+                }
+            }
+        }  
+        .groupe_plats_note{
+            animation-delay: 200ms;
+            animation: fadein 3s;
+            @keyframes fadein{
+                from{
+                    opacity: 0;
+               }
+                to{
+                    opacity: 1;
+                }
+            }
+        }
+
+        .groupe_dessert_note{
+            animation-delay: 800ms;
+            animation: fadein 5s;
+            @keyframes fadein{
+                from{
+                    opacity: 0;
+               }
+                to{
+                    opacity: 1;
+                }
+            }
+        }
+
+        .groupe_entree_note, .groupe_plats_note, .groupe_dessert_note{   
+            h2{
+                width: 13%;
+                padding-bottom: 1.5%;
+                margin-bottom: 4%;
+                border-bottom: solid 2px #99E2D0;
+                font-size: 1.2rem;
+                color: #9A9A9A;
+            }
+            .plat_note{
+                display: flex;
+                width: 95%;
+                justify-content: space-between;
+                height: 75px;
+                padding-left: 3%;
+                margin-bottom: 4%;
+                border-radius: 15px;
+                box-shadow: 5px 5px 15px 5px #E6E6E6;
+                background-color: white;
+                font-size: 1rem;
+                line-height: 1.6;
+                .nom_plat_note{
+                    display: inline-block;
+                    width: 400px;
+                    padding-top: 2.5%;
+                    position: relative;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    .titre_plat{
+                        font-size: 1.2rem;
+                        font-weight: bold;
+                    }
+                }
+                .prix_note{
+                    width: 19%;
+                    height: 55px;
+                    padding-top: 8.5%;
+                    text-align: center;
+                }
+                .choix_note{
+                    width: 0;
+                    height: 75px;
+                    border-top-right-radius: 15px;
+                    border-bottom-right-radius: 15px;
+                    background-color: #99E2D0;
+                    font-size: 1.5rem;
+                    color: white;
+                    text-align: center;
+                    line-height: 3;
+                }
+                &:hover .choix_note{
+                    width: 22%;
+                    transition: width 1s cubic-bezier(0.1, 0.1, 0.1, 1);
+                }
+                .fas{
+                    visibility: hidden;
+                }
+                &:hover .fas{
+                    visibility: visible;
+                    transform: rotate(360deg);
+                    transition: transform 400ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                }
+            }
+        }
+    }
+    $cd-btn-start: linear-gradient(rgba(255, 121, 218, 1),rgba(147, 86, 220, 1));
+    $cd-btn-end: linear-gradient(rgba(255, 121, 218, 0.9),rgba(147, 86, 220, 0.9));
+    $cd-bdr-start: 2px 2px 2px rgb(82, 81, 81, 0.9);
+    $cd-bdr-end: 2px 5px 5px rgb(82, 81, 81, 1);
+    $cd-txt: white;
+    .bouton_note{
+        width: 25%;
+        height: 80px;
+        border-radius: 10rem;
+        background: $cd-btn-start;
+        box-shadow: $cd-bdr-start;
+        text-align: center;
+        line-height: 2.5;
+        font-size: 2rem;
+        cursor: pointer;
+        transition: all 400ms;
+        &:hover{
+            background: $cd-btn-end;
+            box-shadow: $cd-bdr-end;
+        }
+        .commander_note{
+            color:$cd-txt;
+        }
+    }
+}
+
+@media (min-width: 376px) and (max-width: 1025px){
+
+    /* Bloc Menu */
+
+    .carte_restaurant_note{
+        height: 530px;
+        .menu_restaurant_note{
+            height: 240px;
+            .groupe_entree_note, .groupe_plats_note, .groupe_dessert_note{
+                width: 28%;
+                height: 290px;
+                margin-bottom: 5%;
+                background-color: #f6f6f6;   
+                h2{
+                    font-size: 1rem;
+                }
+                .plat_note{
+                    height: 62px;
+                    padding-left: 3%;
+                    font-size: 0.8rem;
+                    .nom_plat_note{
+                        width: 250px;
+                        .titre_plat_note{
+                            font-size: 1rem;
+                            font-weight: bold;
+                        }
+                    }
+                    .prix_note{
+                        padding-top: 11.5%;
+                    }
+                    .choix_note{
+                        height: 62px;
+                        font-size: .8rem;
+                        line-height: 4;
+                        line-height: 5;
+                    }
+                }
+            }
+        }
+        .bouton_note{
+            width: 25%;
+            height: 60px;
+            border-radius: 10rem;
+            line-height: 2.5;
+            font-size: 1.5rem;
+            margin: auto;
+            margin-top: 5%;
+            margin-bottom: 5%;
+            }
+    }
+}
+
+@media (max-width: 375px){
+
+    section
+    
+            /* Bloc Menu */
+    
+        .carte_restaurant_note{
+            display: block;
+            position: relative;
+            top: -62px;
+            height: 1160px;    
+            background-color: #f6f6f6;
+            border-top-left-radius: 35px;
+            border-top-right-radius: 35px;
+            .nom_restaurant_note{
+                display:flex;
+                width: 100%;
+                margin-bottom: 5%;
+                h1{
+                    font-size: 1.5rem;
+                    padding-top: 9%;
+                    padding-bottom: 5%;
+                    padding-left: 5%;
+                    margin: 0;
+                }
+                .far.fa-heart{
+                    padding-top: 10.5%;
+                    padding-right: 0;
+                    margin: 0;
+                    font-size: 1.35rem;
+                }
+            }
+            .menu_restaurant_note{
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+                margin-bottom: 10%;
+                .groupe_entree_note{
+                    width: 90%;
+                    height: 330px;
+                    margin-left: 5%;
+                    margin-bottom: 8%;
+                    background-color: #f6f6f6;
+                }
+                .groupe_plats_note, .groupe_dessert_note{
+                    width: 90%;
+                    height: 250px;
+                    margin-left: 5%;
+                    margin-bottom: 8%;
+                    background-color: #f6f6f6;
+                }
+                .groupe_entree_note, .groupe_plats_note, .groupe_dessert_note{   
+                    h2{
+                        font-size: 0.9rem;
+                    }
+                    .plat_note{
+                        height: 62px;
+                        padding-left: 3%;
+                        font-size: 0.8rem;
+                        .nom_plat_note{
+                            width: 250px;
+                            .titre_plat_note{
+                                font-size: 1rem;
+                                font-weight: bold;
+                            }
+                        }
+                        .prix_note{
+                            padding-top: 11.5%;
+                        }
+                        .choix_note{
+                            height: 62px;
+                            font-size: 1rem;
+                            line-height: 4;
+                        }
+                        &:hover .choix_note{
+                            width: 22%;
+                        }
+                    }    
+                }
+            }
+            .bouton_note{
+                width: 50%;
+                height: 46px;
+                border-radius: 10rem;
+                margin: auto;
+                line-height: 3.2;
+                font-size: 0.9rem;
+            }
+        }
+    }
+    
+    @media (max-width: 320px){
+    
+        section{
+        
+            /* Bloc Menu */
+    
+            .carte_restaurant_note{
+                height: 1130px;    
+                background-color: #f6f6f6;
+                border-top-left-radius: 35px;
+                border-top-right-radius: 35px;
+                .nom_restaurant_note{
+                    display:flex;
+                    width: 100%;
+                    margin-bottom: 5%;
+                    h1{
+                        font-size: 1.5rem;
+                        padding-top: 9%;
+                        padding-bottom: 5%;
+                        padding-left: 5%;
+                        margin: 0;
+                    }
+                    .far.fa-heart{
+                        padding-top: 10.5%;
+                        padding-right: 0;
+                        margin: 0;
+                        font-size: 1.35rem;
+                    }
+                }
+                .menu_restaurant_note{
+                    display: flex;
+                    flex-wrap: wrap;
+                    width: 100%;
+                    margin-bottom: 10%;
+                    .groupe_entree_note{
+                        width: 90%;
+                        height: 320px;
+                        margin-left: 5%;
+                        margin-bottom: 8%;
+                        background-color: #F6F6F6;
+                    }
+                    .groupe_plats_note, .groupe_dessert_note{
+                        width: 90%;
+                        height: 250px;
+                        margin-left: 5%;
+                        margin-bottom: 8%;
+                        background-color: #F6F6F6;
+                    }
+                    .groupe_entree_note, .groupe_plats_note, .groupe_dessert_note{   
+                        h2{
+                            font-size: 0.9rem;
+                        }
+                        .plat_note{
+                            height: 62px;
+                            padding-left: 3%;
+                            font-size: 0.8rem;
+                            .nom_plat_note{
+                                width: 250px;
+                                .titre_plat_note{
+                                    font-size: 1rem;
+                                    font-weight: bold;
+                                }
+                            }
+                            .prix_note{
+                                padding-top: 11.5%;
+                            }
+                            .choix_note{
+                                height: 62px;
+                                font-size: 1rem;
+                                line-height: 4;
+                            }
+                            &:hover .choix_note{
+                                width: 22%;
+                            }
+                        }    
+                    }
+                }
+                .bouton_note{
+                    width: 50%;
+                    height: 46px;
+                    border-radius: 10rem;
+                    margin: auto;
+                    line-height: 3.2;
+                    font-size: 0.9rem;
+                }
             }
         }
     }

@@ -30,6 +30,8 @@ body {
   /* Restaurants */
   /* Footer */
   /* Footer */
+  /* Pied de page pour page 4 "La note E=enchantée" */
+  /* Footer */
 }
 body .loading {
   display: flex;
@@ -62,6 +64,17 @@ body .loading {
   visibility: hidden;
   transition: visibility 1s 3s linear;
 }
+body #titre_principal_accueil {
+  padding-top: 1.8%;
+  margin-bottom: 1.8%;
+}
+body #titre_principal_accueil .logo {
+  text-align: center;
+}
+body #titre_principal_accueil .logo img {
+  width: 254.8px;
+  height: 44.2px;
+}
 body #titre_principal {
   display: flex;
   justify-content: center;
@@ -85,6 +98,8 @@ body #titre_principal .logo img {
   }
   body #titre_principal_accueil .logo {
     text-align: center;
+    padding-top: 3%;
+    margin-bottom: 2%;
   }
   body #titre_principal_accueil .logo img {
     width: 148.96px;
@@ -426,6 +441,76 @@ body #pied_de_page .menu_pied_de_page .proposer_un_restaurant, body #pied_de_pag
   }
   body #pied_de_page {
     top: 1294px;
+  }
+}
+body #pied_de_page_note {
+  height: 100%;
+  padding-bottom: 2%;
+  background-color: #353535;
+  color: white;
+}
+body #pied_de_page_note .logo_note {
+  font-family: "Shrikhand";
+  font-size: 1.5rem;
+  text-align: left;
+  margin-left: 3%;
+  padding-top: 1%;
+  margin-bottom: 1%;
+}
+body #pied_de_page_note .menu_pied_de_page_note {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-left: 3%;
+}
+body #pied_de_page_note .menu_pied_de_page_note .fas.fa-utensils {
+  font-size: 1rem;
+}
+body #pied_de_page_note .menu_pied_de_page_note .fas.fa-hands-helping {
+  font-size: 0.6rem;
+}
+body #pied_de_page_note .menu_pied_de_page_note .fas.fa-utensils, body #pied_de_page_note .menu_pied_de_page_note .fas.fa-hands-helping {
+  margin-right: 1%;
+}
+body #pied_de_page_note .menu_pied_de_page_note .proposer_un_restaurant, body #pied_de_page_note .menu_pied_de_page_note .devenir_partenaire, body #pied_de_page_note .menu_pied_de_page_note .mentions_legales, body #pied_de_page_note .menu_pied_de_page_note .contact {
+  color: white;
+}
+@media (max-width: 375px) {
+  body {
+    /* Footer */
+  }
+  body #pied_de_page_note {
+    position: absolute;
+    top: 1400px;
+    width: 100%;
+    height: 178px;
+    padding-top: 6%;
+  }
+  body #pied_de_page_note .logo_note {
+    font-size: 0.95rem;
+    margin-left: 5%;
+    margin-bottom: 5%;
+  }
+  body #pied_de_page_note .menu_pied_de_page_note {
+    font-size: 0.8rem;
+    line-height: 1.7;
+    margin-left: 5%;
+  }
+  body #pied_de_page_note .menu_pied_de_page_note .fas.fa-utensils {
+    font-size: 0.7rem;
+  }
+  body #pied_de_page_note .menu_pied_de_page_note .fas.fa-hands-helping {
+    font-size: 0.5rem;
+  }
+  body #pied_de_page_note .menu_pied_de_page_note .fas.fa-utensils, body #pied_de_page_note .menu_pied_de_page_note .fas.fa-hands-helping {
+    margin-right: 1.5%;
+  }
+}
+@media (max-width: 320px) {
+  body {
+    /* Footer */
+  }
+  body #pied_de_page_note {
+    top: 1390px;
   }
 }
 
