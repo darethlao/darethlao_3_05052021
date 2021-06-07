@@ -236,7 +236,7 @@ body{
                 }
                 .restaurant1, .restaurant2, .restaurant3, .restaurant4{
                     display: flex;
-                    flex: wrap;
+                    flex-wrap: wrap;
                     justify-content: space-between;
                     width: 400px;
                     margin-left: 4%;
@@ -345,7 +345,7 @@ body{
             }
             .restaurant1, .restaurant2, .restaurant3, .restaurant4{
                 display: flex;
-                flex: wrap;
+                flex-wrap: wrap;
                 justify-content: space-between;
                 width: 95%;
                 margin-left: 4%;
